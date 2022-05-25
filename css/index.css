@@ -49,8 +49,6 @@ h3{
     text-transform: uppercase;
 }
 button{
-    padding: 10px 50px;
-    font-size: 20px;
     font-weight: bold;
     text-transform: uppercase;
     cursor: pointer;
@@ -209,12 +207,105 @@ div.techs img:nth-of-type(n + 3){
     width: 70px;
     height: 70px;
 }
-button#btn_download{
+button.btn_download{
+    padding: 10px 50px;
+    font-size: 20px;
     color: #fff;
     background-color: var(--cyan);
 }
-button#btn_download:hover{
+button.btn_download:hover{
     background-color: var(--cyan-light);
+}
+
+section.sec4{
+    justify-content: flex-end;
+    padding: 40px var(--pad);
+    background-image: url(../src/bg2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+section.sec4 div.cont{
+    margin: 0 40px 0 0;
+    width: 100vw;
+    max-width: 600px;
+}
+section.sec4 div.cont h4{
+    margin: 0 0 20px 0;
+    color: #fff;
+    font-size: 32px;
+}
+div.bg_contact{
+    padding: 20px 40px;
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 20px;
+    background-color: #fff;
+    box-sizing: content-box;
+}
+div.bg_contact img{
+    width: 60px;
+}
+div.bg_contact span{
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--gray-normal);
+    display: flex;
+    align-items: center;
+}
+
+footer{
+    padding: 30px calc(10vw - 20px);
+    width: 100%;
+    background-color: #111;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+div.main_ft{
+    border-bottom: 3px solid #fff;
+    padding: 0 30px 20px 30px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+div.txt_ft h4{
+    max-width: 350px;
+    color: #fff;
+    font-size: 32px;
+}
+div.txt_ft span{
+    color: #fff;
+    font-size: 18px;
+}
+div.btns_cont{
+    display: flex;
+    flex-direction: column;
+}
+div.btns_cont button.btn_download{
+    margin: 3px 0;
+    border: 3px solid var(--cyan);
+    padding: 10px 20px;
+    font-size: 18px;
+}
+div.btns_cont button.btn_orcamento{
+    margin: 3px 0;
+    border: 3px solid var(--cyan);
+    padding: 10px 20px;
+    font-size: 18px;
+    color: var(--cyan);
+    background-color: #fff;
+}
+
+footer > div:nth-child(2){
+    padding: 10px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+footer div:nth-child(2) img{
+    margin: 0 10px;
 }
 
 @media screen and (max-width: 860px){
@@ -276,5 +367,34 @@ button#btn_download:hover{
     }
     section.sec3 div.cont div.img{
         margin: 20px 0 0 0;
+    }
+
+    section.sec4{
+        justify-content: center;
+        background-position: top;
+    }
+    section.sec4 div.cont{
+        margin: 0 0 0 0;
+    }
+    section.sec4 div.cont h4{
+        text-align: center;
+    }
+    div.bg_contact{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+        text-align: center;
+    }
+
+    div.main_ft{
+        flex-direction: column;
+    }
+    div.txt_ft{
+        margin: 0 0 20px 0;
+        text-align: center;
+    }
+    div.txt_ft h4{
+        max-width: none;
     }
 }
