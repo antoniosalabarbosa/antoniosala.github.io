@@ -1,0 +1,47 @@
+$cyan: #18878F;
+$cyan-light: #37b0b9;
+
+$gray-light: #696969;
+$gray-normal: #222;
+$white: #fff;
+$black: #000;
+
+$pad: 40px;
+$transition: 200ms ease;
+
+$font_sans_serif: "Ubuntu", Arial, Helvetica, sans-serif;
+$font_serif: Georgia, 'Times New Roman', Times, serif;
+
+a{
+    color: $white;
+    text-decoration: none;
+}
+h1{
+    margin: 10px 0 0 0;
+    padding: 0 10px;
+    color: $white;
+    font-size: 40px;
+}
+h2{
+    margin: 0 0 5px 0;
+    color: $white;
+    font-size: 1.5rem;
+    font-weight: lighter;
+    font-family: $font_serif;
+}
+h3{
+    color: #000;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+button{
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: $transition;
+}
+
+section{
+    width: 100%;
+    display: flex;
+}
