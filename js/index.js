@@ -15,7 +15,6 @@ burguer.addEventListener("click", ()=>{
 
 btn_download.forEach(e => e.addEventListener("click", ()=> window.open("../src/CV_Antonio_Sala_Barbosa.pdf")));
 
-
 const label_control = document.querySelectorAll("label.control");
 label_control.forEach((e)=>{
     e.addEventListener("click", ()=>{
@@ -25,3 +24,20 @@ label_control.forEach((e)=>{
         e.classList.add("active");
     });
 });
+
+const view = document.getElementById("view");
+
+async function fetchJSON() {
+    const json = await fetch("js/projects.json")
+    .then(res => res.json());
+
+    insertProjects(json);
+}
+
+function insertProjects(json){
+    json.forEach((e,q)=>{
+        
+    });
+}
+
+fetchJSON();

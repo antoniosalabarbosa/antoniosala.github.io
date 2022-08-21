@@ -355,9 +355,17 @@ section.sec2 {
 
 section.sec2 div.cont {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 section.sec2 div.cont div.controls {
+  margin: 20px 0 0 0;
   padding: 0 0 0 clamp(20px, 10vw, 200px);
   width: 100%;
   display: -webkit-box;
@@ -382,7 +390,8 @@ section.sec2 div.cont div.controls .control {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 1.25;
+  font-size: 1.2rem;
+  text-transform: uppercase;
   cursor: pointer;
   -webkit-transition: 200ms ease;
   transition: 200ms ease;
@@ -393,12 +402,107 @@ section.sec2 div.cont div.controls .control.active {
 }
 
 section.sec2 div.cont div.controls .control p {
-  margin: 0 0 0 10px;
   cursor: pointer;
 }
 
 section.sec2 div.cont div.controls .control input[type=radio] {
   cursor: pointer;
+}
+
+section.sec2 div.cont #view {
+  margin: 10px 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+section.sec2 div.cont #view div.projeto {
+  margin: 20px 0;
+  padding: 20px;
+  width: 350px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
+}
+
+section.sec2 div.cont #view div.projeto:hover {
+  -webkit-box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+          box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+section.sec2 div.cont #view div.projeto a div.img-proj {
+  margin: 0 0 20px 0;
+  padding: 10px 20px;
+  width: 350px;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+section.sec2 div.cont #view div.projeto div.txt-proj div.icon_tec img,
+section.sec2 div.cont #view div.projeto div.txt-proj div.view_in button img {
+  width: 100%;
+  height: 100%;
+  max-width: 30px;
+  max-height: 50px;
+}
+
+section.sec2 div.cont #view div.projeto div.txt-proj div.line {
+  margin: 4px 0;
+  width: 100%;
+  height: 3px;
+  background-color: #18878F;
+}
+
+section.sec2 div.cont #view div.projeto div.txt-proj strong {
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+  color: #222;
+}
+
+section.sec2 div.cont #view div.projeto div.txt-proj p {
+  margin: 20px 0;
+  font-size: 1.1rem;
+}
+
+section.sec2 div.cont #view div.projeto div.txt-proj div.view_in {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+section.sec2 div.cont #view div.projeto div.txt-proj div.view_in a button {
+  margin: 0 10px;
+  padding: 7px 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #014f8e;
+}
+
+section.sec2 div.cont #view div.projeto div.txt-proj div.view_in a button:hover {
+  background-color: #69ade4;
+}
+
+section.sec2 div.cont #view div.projeto div.txt-proj div.view_in a button img {
+  margin: 0 0 0 10px;
 }
 
 section.sec3 {

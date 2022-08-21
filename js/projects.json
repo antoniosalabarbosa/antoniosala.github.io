@@ -1,0 +1,41 @@
+[
+    {
+        "id": 1,
+        "name": "Notebook Acer",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe laudantium nihil labore cupiditate! Assumenda.",
+        "site": "https://site-acer-notebook.netlify.app/",
+        "github": "https://github.com/antoniosalabarbosa/Notebook_Gamer_Acer",
+        "img": "./src/portifolio/acer.jpg",
+        "techs": [
+            "html.png",
+            "css.png",
+            "js.png"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Nerdweb Clone",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe laudantium nihil labore cupiditate! Assumenda.",
+        "site": "https://nerdweb-site-reply.netlify.app/",
+        "github": "https://github.com/antoniosalabarbosa/nerdweb-test",
+        "img": "./src/portifolio/nerdweb.jpg",
+        "techs": [
+            "html.png",
+            "css.png",
+            "js.png"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "DVR Móveis",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe laudantium nihil labore cupiditate! Assumenda.",
+        "site": "https://dvrmoveis.com/",
+        "github": "",
+        "img": "./src/portifolio/dvrmoveis.jpg",
+        "techs": [
+            "html.png",
+            "css.png",
+            "js.png"
+        ]
+    }
+]
