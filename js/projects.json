@@ -37,5 +37,43 @@
             "css.png",
             "js.png"
         ]
+    },
+    {
+        "id": 4,
+        "name": "Site Contabilidade",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe laudantium nihil labore cupiditate! Assumenda.",
+        "site": "https://site-contabilidade-reply.netlify.app/",
+        "github": "https://github.com/antoniosalabarbosa/contabilidade-site-clone",
+        "img": "./src/portifolio/contabilidade.jpg",
+        "techs": [
+            "html.png",
+            "css.png"
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Página de Ecommerce",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe laudantium nihil labore cupiditate! Assumenda.",
+        "site": "https://site-ecommerce-page-reply.netlify.app/",
+        "github": "https://github.com/antoniosalabarbosa/ecommerce-page",
+        "img": "./src/portifolio/ecommerce.jpg",
+        "techs": [
+            "html.png",
+            "css.png",
+            "js.png"
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Site Mobile",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe laudantium nihil labore cupiditate! Assumenda.",
+        "site": "https://site-mobile.netlify.app/",
+        "github": "https://github.com/antoniosalabarbosa/mobile-site-purple",
+        "img": "./src/portifolio/mobile.jpg",
+        "techs": [
+            "html.png",
+            "css.png",
+            "js.png"
+        ]
     }
 ]

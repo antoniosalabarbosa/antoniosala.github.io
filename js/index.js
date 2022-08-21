@@ -37,8 +37,8 @@ async function fetchJSON() {
 function insertProjects(json){
     json.forEach((e,q)=>{
         let buttonsA = [
-            `<a href='${e.site}'><button>Site <img src='./src/icons/internet.png'></button></a>`,
-            (e.github ? `<a href='${e.github}'><button>Github <img src='./src/icons/github2.png'></button></a>` : false)
+            `<a href='${e.site}' target='_blank'><button>Site <img src='./src/icons/internet.png'></button></a>`,
+            (e.github ? `<a href='${e.github}' target='_blank'><button>Github <img src='./src/icons/github2.png'></button></a>` : false)
         ];
 
         let divViewIn = document.createElement("div");
@@ -81,7 +81,7 @@ function insertProjects(json){
 
         let divProjeto = document.createElement('div');
         divProjeto.classList.add('projeto');
-        divProjeto.innerHTML = `<a href=${e.site}><div class="img-proj" style="background-image: url(${e.img});"></div></a>`;
+        divProjeto.innerHTML = `<a href=${e.site} target='_blank'><div class="img-proj" style="background-image: url(${e.img});"></div></a>`;
         divProjeto.appendChild(div_txt_proj);
 
         view.appendChild(divProjeto);
