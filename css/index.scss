@@ -203,9 +203,19 @@ section.sec2{
                     background-position: center;
                     background-size: cover;
                     background-repeat: no-repeat;
+                    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
                 }
 
                 div.txt-proj{
+                    div.icon_tec{
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+
+                        img{
+                            margin: 0 5px;
+                        }
+                    }
                     div.icon_tec img,
                     div.view_in button img{
                         width: 100%;

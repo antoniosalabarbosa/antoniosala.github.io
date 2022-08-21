@@ -36,8 +36,56 @@ async function fetchJSON() {
 
 function insertProjects(json){
     json.forEach((e,q)=>{
-        
+        let buttonsA = [
+            `<a href='${e.site}'><button>Site <img src='./src/icons/internet.png'></button></a>`,
+            (e.github ? `<a href='${e.github}'><button>Github <img src='./src/icons/github2.png'></button></a>` : false)
+        ];
+
+        let divViewIn = document.createElement("div");
+        divViewIn.classList.add('view_in');
+        for (let i = 0; i < buttonsA.length; i++) {
+            if(buttonsA[i]){
+                divViewIn.innerHTML += buttonsA[i];
+            }
+        }
+
+        let p = document.createElement('p');
+        p.textContent = e.description;
+
+        let strong = document.createElement('strong');
+        strong.textContent = e.name;
+
+        let divLine = document.createElement('div');
+        divLine.classList.add('line');
+
+        let divIconTec = document.createElement('div');
+        divIconTec.classList.add('icon_tec');
+        let imgTecs = [];
+        e.techs.forEach((e, q)=>{
+            let img = document.createElement('img');
+            img.src = `./src/icons/${e}`;
+            imgTecs[q] = img;
+        });
+        imgTecs.forEach((e)=>{
+            divIconTec.appendChild(e);
+        });
+
+        let div_txt_proj = document.createElement('div');
+        div_txt_proj.classList.add('txt-proj');
+        function divTxtProjChilds(divIconTec, divLine, strong, p, divViewIn) {
+            let array = [divIconTec, divLine, strong, p, divViewIn];
+            array.forEach((e) => div_txt_proj.appendChild(e));
+        }
+        divTxtProjChilds(divIconTec, divLine, strong, p, divViewIn);
+
+
+        let divProjeto = document.createElement('div');
+        divProjeto.classList.add('projeto');
+        divProjeto.innerHTML = `<a href=${e.site}><div class="img-proj" style="background-image: url(${e.img});"></div></a>`;
+        divProjeto.appendChild(div_txt_proj);
+
+        view.appendChild(divProjeto);
+
     });
 }
-
 fetchJSON();
