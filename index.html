@@ -14,20 +14,31 @@
     <div id="root">
         <header>
             <div class="hd_socials">
-                <img src="./src/icons/linkedin2.png">
-                <img src="./src/icons/whatsapp2.png">
-                <img src="./src/icons/instagram2.png">
-                <img src="./src/icons/github2.png">
+                <a href="https://www.linkedin.com/in/antonio-sala-barbosa/" target="_blank">
+                    <img src="./src/icons/linkedin2.png">
+                </a>
+
+                <a href="https://api.whatsapp.com/send/?phone=24998782748" target="_blank">
+                    <img src="./src/icons/whatsapp2.png">
+                </a>
+
+                <a href="https://www.instagram.com/antoniosalabarbosa/" target="_blank">
+                    <img src="./src/icons/instagram2.png">
+                </a>
+
+                <a href="https://www.github.com/antoniosalabarbosa/" target="_blank">
+                    <img src="./src/icons/github2.png">
+                </a>
             </div>
 
             <nav>
                 <strong>Antonio Sala Barbosa</strong>
                 
                 <span>
-                    <a href="#">Início</a>
-                    <a href="#">Projetos</a>
-                    <a href="#">Sobre</a>
-                    <a href="#">Contato</a>
+                    <a href="#HOME">Início</a>
+                    <a href="#PROJETOS">Projetos</a>
+                    <a href="#SOBRE">Sobre</a>
+                    <a href="#CONTATO">Contato</a>
                 </span>
 
                 <div id="burguer">
@@ -38,30 +49,25 @@
             </nav>
         </header>
 
-        <section class="sec1">
+        <section class="sec1" id="HOME">
             <div class="color-sec1">
-                <div id="main_content">
+                <main id="main_content">
                     <img src="./src/antonio.jpg" loading="lazy">
                     <h1>ANTONIO SALA BARBOSA</h1>
-
                     <span class="line"></span>
-
-                    <h2>Técnico em Informática</h2>
                     <h2>Desenvolvedor Front-End</h2>
-                    <h2>Designer</h2>
-                </div>
+                    <h2>HTML, CSS & JavaScript</h2>
+                </main>
             </div>
         </section>
 
-        <section class="sec2">
+        <section class="sec2" id="PROJETOS">
             <h3>PROJETOS</h3>
             <div class="line"></div>
 
             <div class="cont">
                 <!--
                 <div class="controls">
-                    <span>Exibir:</span>
-
                     <label for="todos" class="control active">
                         <input type="radio" name="proj" id="todos" checked hidden>
                         <p>Todos</p>
@@ -81,50 +87,81 @@
 
                 <div id="view"></div>
             </div>
-            <button class="btn_orcamento">FAZER ORÇAMENTO</button>
+            <!--
+                <button class="btn_orcamento">FAZER ORÇAMENTO</button>
+            -->
         </section>
 
-        <section class="sec3">
+        <section class="sec3" id="SOBRE">
             <h3>SOBRE MIM</h3>
             <div class="line"></div>
 
             <div class="cont">
                 <div class="informations">
-                    <p>
-                        Sou um jovem profissional de design e criação de sites. Meus projetos são feitos com:
-                    </p>
-    
-                    <div class="techs">
-                        <img src="./src/icons/html.png" title="HTML">
-                        <img src="./src/icons/css.png" title="CSS">
-                        <img src="./src/icons/js.png" title="JavaScript">
-                        <img src="./src/icons/sass.png" title="SASS">
-                        <img src="./src/icons/figma.png" title="Figma">
+                    
+                    <div class="content_info">
+                        <strong>Que eu sou?</strong>
+                        <ul>
+                            <li>
+                                Tenho 18 anos;
+                            </li>
+                            
+                            <li>
+                                Moro no Rio Grande do Norte - Brasil;
+                            </li>
+                            
+                            <li>
+                                Cursando Análise e Desenvolvimento de Sistemas EaD (UNINASSAU);
+                            </li>
+
+                            <li>
+                                Possuo nível técnico em Informática para Internet (ETE - Amaury Cesar Vieira)
+                            </li>
+                        </ul>
+
+                        <strong>Crio meus projetos com:</strong>
                     </div>
+
+                    <div>
+                        <div class="techs">
+                            <img src="./src/icons/html.png" title="HTML">
+                            <img src="./src/icons/css.png" title="CSS">
+                            <img src="./src/icons/js.png" title="JavaScript">
+                            <img src="./src/icons/sass.png" title="SASS">
+                            <img src="./src/icons/figma.png" title="Figma">
+                        </div>
     
-                    <p>...entre outras ferramentas.</p>
-                    <button class="btn_download">Meu Currículo</button>
+                        <button class="btn_download download">Meu Currículo</button>
+                    </div>
                 </div>
 
                 <div class="img"></div>
             </div>
         </section>
 
-        <section class="sec4">
+        <section class="sec4" id="CONTATO">
             <div class="cont">
                 <h4>CONTATO</h4>
                 <div class="bg_contact">
-                    <img src="./src/icons/WHATSAPP.png">
-                    <span>+55 (24) 99878-2748</span>
+                    <a href="https://api.whatsapp.com/send/?phone=24998782748">
+                        <img src="./src/icons/WHATSAPP.png" target="_blank">
+                        <span>+55 (24) 99878-2748</span>
+                    </a>
 
-                    <img src="./src/icons/LINKEDIN.png">
-                    <span>Antonio Sala Barbosa</span>
+                    <a href="https://www.linkedin.com/in/antonio-sala-barbosa/" target="_blank">
+                        <img src="./src/icons/LINKEDIN.png">
+                        <span>Antonio Sala Barbosa</span>
+                    </a>
 
-                    <img src="./src/icons/INSTAGRAM.png">
-                    <span>@antoniosalabarbosa</span>
+                    <a href="https://www.instagram.com/antoniosalabarbosa/" target="_blank">
+                        <img src="./src/icons/INSTAGRAM.png">
+                        <span>@antoniosalabarbosa</span>
+                    </a>
 
-                    <img src="./src/icons/github.png">
-                    <span>antoniosalabarbosa</span>
+                    <a href="https://www.github.com/antoniosalabarbosa/" target="_blank">
+                        <img src="./src/icons/github.png">
+                        <span>antoniosalabarbosa</span>
+                    </a>
                 </div>
             </div>
         </section>
@@ -137,8 +174,11 @@
                 </div>
 
                 <div class="btns_cont">
-                    <button class="btn_download-2">BAIXAR CURRÍCULO</button>
-                    <button class="btn_orcamento">FAZER ORÇAMENTO</button>
+                    <button class="btn_download-2 download">BAIXAR CURRÍCULO</button>
+
+                    <!--
+                        <button class="btn_orcamento">FAZER ORÇAMENTO</button>
+                    -->
                 </div>
             </div>
 

@@ -14,6 +14,9 @@ $transition: 200ms ease;
 $font_sans_serif: "Ubuntu", Arial, Helvetica, sans-serif;
 $font_serif: Georgia, 'Times New Roman', Times, serif;
 
+html, body{
+    scroll-behavior: smooth;
+}
 a{
     color: $white;
     text-decoration: none;
@@ -25,11 +28,12 @@ h1{
     font-size: 40px;
 }
 h2{
-    margin: 0 0 5px 0;
+    margin: 5px 0;
     color: $white;
     font-size: 1.5rem;
-    font-weight: lighter;
+    font-weight: 100;
     font-family: $font_serif;
+    line-height: 1.7;
 }
 h3{
     color: #000;
@@ -46,4 +50,8 @@ button{
 section{
     width: 100%;
     display: flex;
+
+    &:target{
+        scroll-margin-top: 95px;
+    }
 }

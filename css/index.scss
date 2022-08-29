@@ -1,5 +1,4 @@
 @import './extra';
-@import './responsive';
 
 :root{
     font-size: 16px;
@@ -40,7 +39,7 @@ header{
         justify-content: flex-end;
         background-color: $gray-normal;
 
-        img{
+        a img{
             margin: 0 10px;
             width: 30px;
         }
@@ -105,7 +104,7 @@ section.sec1{
     }
     #main_content{
         border-radius: 20px;
-        padding: 10px 20px;
+        padding: 10px 20px 20px 20px;
         width: 90vw;
         max-width: 450px;
         display: flex;
@@ -135,21 +134,25 @@ section.sec2{
     flex-direction: column;
     align-items: center;
 
+    div.line{
+        margin: 5px 0 30px 0;
+        width: calc(20% + 50px);
+        height: 3px;
+        background-color: #000;
+    }
+
     div.cont{
+        margin: 20px 0 0 0;
         width: 100%;
         display: flex;
         flex-direction: column;
+        align-items: center;
 
         div.controls{
             margin: 20px 0 0 0;
-            padding: 0 0 0 clamp(20px, 10vw, 200px);
             width: 100%;
             display: flex;
-            align-items: center;
-
-            span{
-                font-size: 1.5rem;
-            }
+            justify-content: center;
 
             .control{
                 margin: 0 20px;
@@ -177,7 +180,7 @@ section.sec2{
         }
 
         #view{
-            margin: 10px 0;
+            margin: 0 0 10px 0;
             width: 100%;
             display: flex;
             flex-wrap: wrap;
@@ -290,20 +293,38 @@ section.sec3{
         div.informations{
             max-width: 550px;
 
-            p{
-                margin: 0 0 30px 0;
-                font-size: 22px;
+            div.content_info{
+                strong{
+                    font-size: 1.5rem;
+                }
+
+                ul{
+                    margin: 0 0 40px 20px;
+                    li{
+                        margin: 20px 0;
+                        max-width: 430px;
+                        list-style: none;
+                        font-size: 1.3rem;
+                        font-family: $font_serif;
+    
+                        &::before{
+                            content: "-";
+                            margin: 0 10px 0 0;
+                        }
+                    }
+                }
             }
 
-            div.techs{
-                margin: 0 0 30px 0;
+            div div.techs{
+                margin: 30px 0 30px 0;
                 display: flex;
+                flex-wrap: wrap;
                 justify-content: space-around;
                 align-items: center;
 
                 img{
+                    margin: 10px;
                     width: 60px;
-                    margin: 0 7px;
 
                     &:nth-of-type(n + 3){
                         width: 70px;
@@ -315,7 +336,7 @@ section.sec3{
 
         div.img{
             margin: 0 0 0 60px;
-            border-radius: 50px;
+            border-radius: 30px;
             min-width: 100px;
             max-width: 280px;
             width: 100%;
@@ -324,7 +345,7 @@ section.sec3{
             background-size: cover;
             background-position: top;
             background-repeat: no-repeat;
-            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
         }
     }
 }
@@ -359,9 +380,8 @@ section.sec4{
 
         div.bg_contact{
             padding: 20px 40px;
-            display: grid;
-            grid-template-columns: 60px 1fr;
-            gap: 20px;
+            display: flex;
+            flex-direction: column;
             background-color: $white;
             box-sizing: content-box;
 
@@ -369,12 +389,23 @@ section.sec4{
                 width: 60px;
             }
 
-            span{
-                font-size: 1.5rem;
-                font-weight: bold;
-                color: $gray-normal;
+            a{
+                margin: 20px 0;
+                width: 100%;
                 display: flex;
                 align-items: center;
+
+                img{
+                    margin: 0 20px 0 0;
+                }
+
+                span{
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    color: $gray-normal;
+                    display: flex;
+                    align-items: center;
+                }
             }
         }
     }
@@ -449,3 +480,5 @@ button.btn_orcamento{
         background-color: $cyan;
     }
 }
+
+@import './responsive';

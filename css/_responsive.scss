@@ -1,8 +1,14 @@
-@media screen and (max-width: 860px){
-    section.sec1{
-        margin: 70px 0 0 0;
+@media screen and (max-width: 880px){
+    section{
+        &.sec1{
+            margin: 70px 0 0 0;
+        }
+
+        &:target{
+            scroll-margin-top: 58px;
+        }
     }
-    div.hd_socials{
+    header div.hd_socials{
         display: none;
     }
     nav span{
@@ -27,7 +33,7 @@
         }
     }
     div#burguer{
-        display: flex;
+        display: flex !important;
         cursor: pointer;
 
         div.line{
@@ -46,22 +52,64 @@
             }
         }
     }
+    section.sec2{
+        div.line{
+            margin: 5px 0; 
+        }
+
+        div.cont #view div.projeto{
+            width: 70vw;
+
+            a div.img-proj{
+                width: 100%;
+                min-height: 230px;
+                height: inherit;
+                background-position: top left;
+            }
+        }
+    }
     section.sec3 div.cont{
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
 
         div.informations{
+            margin: 50px 0 0 0;
+            max-width: inherit;
             display: flex;
             flex-direction: column;
             align-items: center;
-    
-            p{
-                text-align: center;
+
+            strong{
+                border-bottom: 2px solid $black;
+            }
+
+            div.content_info{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                ul{
+                    margin: 0 0 40px 0;
+                    text-align: center;
+
+                    &::before{
+                        content: "";
+                        margin: 0;
+                    }
+                }
+            }
+
+            & div:nth-last-child(1){
+                display: flex;
+                flex-direction: column;
+                align-items: center;
             }
         }
 
         div.img{
             margin: 20px 0 0 0;
+            max-width: 300px;
+            height: 300px;
         }
     }
     section.sec4{
@@ -81,6 +129,16 @@
                 align-items: center;
                 row-gap: 20px;
                 text-align: center;
+
+                a{
+                    flex-direction: column;
+                    align-items: inherit;
+                    justify-content: center;
+
+                    img{
+                        margin: 0 0 10px 0;
+                    }
+                }
             }
         }
     }

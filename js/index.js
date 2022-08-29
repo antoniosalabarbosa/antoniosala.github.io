@@ -1,6 +1,6 @@
 const burguer = document.getElementById("burguer");
 const menu_res = document.querySelector("nav span");
-const btn_download = document.querySelectorAll("button.btn_download");
+const btn_download = document.querySelectorAll("button.download");
 
 burguer.addEventListener("click", ()=>{
     if(menu_res.style.right == '0%'){
