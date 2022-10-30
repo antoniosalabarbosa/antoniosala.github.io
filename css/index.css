@@ -301,20 +301,32 @@ section.sec2 div.cont div.controls .control input[type=radio] {
 
 section.sec2 div.cont #view {
   margin: 0 0 10px 0;
-  width: 100%;
+  max-width: 1400px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 section.sec2 div.cont #view div.projeto {
-  margin: 20px 0;
+  margin: 20px 1vw;
   padding: 20px;
-  width: 350px;
+  max-width: 350px;
+  width: 50vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
   -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -676,6 +688,21 @@ button.btn_orcamento:hover {
   border: 3px solid #fff;
   color: #fff;
   background-color: #18878F;
+}
+
+@media screen and (min-width: 1900px) {
+  #view {
+    max-width: unset !important;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1421px) {
+  #view {
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+  }
 }
 
 @media screen and (max-width: 880px) {

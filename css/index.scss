@@ -181,15 +181,19 @@ section.sec2{
 
         #view{
             margin: 0 0 10px 0;
-            width: 100%;
+            max-width: 1400px;
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-around;
+            justify-content: flex-start;
             
             div.projeto{
-                margin: 20px 0;
+                margin: 20px 1vw;
                 padding: 20px;
-                width: 350px;
+                max-width: 350px;
+                width: 50vw;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
                 box-sizing: content-box;
                 box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
                 transition: $transition;

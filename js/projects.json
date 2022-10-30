@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "Notebook Acer",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe laudantium nihil labore cupiditate! Assumenda.",
+        "description": "Divulgação de produto para venda online, feito para cliente na plataforma 99freelas.",
         "site": "https://site-acer-notebook.netlify.app/",
         "github": "https://github.com/antoniosalabarbosa/Notebook_Gamer_Acer",
         "img": "./src/portifolio/acer.jpg",
@@ -15,7 +15,7 @@
     {
         "id": 2,
         "name": "Nerdweb Clone",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe laudantium nihil labore cupiditate! Assumenda.",
+        "description": "Feito para processo seletivo na própria empresa, o site é responsivo e utiliza da biblioteca \"SwiperJS na criação dos slides.\"",
         "site": "https://nerdweb-site-reply.netlify.app/",
         "github": "https://github.com/antoniosalabarbosa/nerdweb-test",
         "img": "./src/portifolio/nerdweb.jpg",
@@ -28,7 +28,7 @@
     {
         "id": 3,
         "name": "DVR Móveis",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe laudantium nihil labore cupiditate! Assumenda.",
+        "description": "Site para empresa de móveis. Exibe os produtos em forma de catálogo e as informações de endereço e contato com a loja física",
         "site": "https://dvrmoveis.com/",
         "github": "",
         "img": "./src/portifolio/dvrmoveis.jpg",
@@ -40,20 +40,8 @@
     },
     {
         "id": 4,
-        "name": "Site Contabilidade",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe laudantium nihil labore cupiditate! Assumenda.",
-        "site": "https://site-contabilidade-reply.netlify.app/",
-        "github": "https://github.com/antoniosalabarbosa/contabilidade-site-clone",
-        "img": "./src/portifolio/contabilidade.jpg",
-        "techs": [
-            "html.png",
-            "css.png"
-        ]
-    },
-    {
-        "id": 5,
         "name": "Página de Ecommerce",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe laudantium nihil labore cupiditate! Assumenda.",
+        "description": "Página de Ecommerce de roupas. Utilizada para prática da linguagem JavaScript na manipulação do DOM.",
         "site": "https://site-ecommerce-page-reply.netlify.app/",
         "github": "https://github.com/antoniosalabarbosa/ecommerce-page",
         "img": "./src/portifolio/ecommerce.jpg",
@@ -64,9 +52,9 @@
         ]
     },
     {
-        "id": 6,
+        "id": 5,
         "name": "Site Mobile",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe laudantium nihil labore cupiditate! Assumenda.",
+        "description": "Planaforma para agendamento de visitas turísticos. (Em Desenvolvimento)",
         "site": "https://site-mobile.netlify.app/",
         "github": "https://github.com/antoniosalabarbosa/mobile-site-purple",
         "img": "./src/portifolio/mobile.jpg",

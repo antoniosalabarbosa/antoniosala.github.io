@@ -1,17 +1,31 @@
-@media screen and (max-width: 880px){
-    section{
-        &.sec1{
+@media screen and (min-width: 1900px){
+    #view{
+        max-width: unset !important;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 1421px){
+    #view{
+        justify-content: center !important;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    section {
+        &.sec1 {
             margin: 70px 0 0 0;
         }
 
-        &:target{
+        &:target {
             scroll-margin-top: 58px;
         }
     }
-    header div.hd_socials{
+
+    header div.hd_socials {
         display: none;
     }
-    nav span{
+
+    nav span {
         position: fixed;
         top: 70px;
         right: -100%;
@@ -27,40 +41,44 @@
         box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
         transition: 200ms ease;
 
-        a{
+        a {
             color: #000;
             margin: calc(5vw + 10px) 0 0 0;
         }
     }
-    div#burguer{
+
+    div#burguer {
         display: flex !important;
         cursor: pointer;
 
-        div.line{
+        div.line {
             transition: 200ms ease;
         }
 
-        &.active{
-            div.line:nth-child(1){
+        &.active {
+            div.line:nth-child(1) {
                 transform: rotate(45deg) translate(5px, 10px);
             }
-            div.line:nth-child(2){
+
+            div.line:nth-child(2) {
                 opacity: 0;
             }
-            div.line:nth-child(3){
+
+            div.line:nth-child(3) {
                 transform: rotate(-45deg) translate(5px, -11px);
             }
         }
     }
-    section.sec2{
-        div.line{
-            margin: 5px 0; 
+
+    section.sec2 {
+        div.line {
+            margin: 5px 0;
         }
 
-        div.cont #view div.projeto{
+        div.cont #view div.projeto {
             width: 70vw;
 
-            a div.img-proj{
+            a div.img-proj {
                 width: 100%;
                 min-height: 230px;
                 height: inherit;
@@ -68,88 +86,91 @@
             }
         }
     }
-    section.sec3 div.cont{
+
+    section.sec3 div.cont {
         flex-direction: column-reverse;
         align-items: center;
 
-        div.informations{
+        div.informations {
             margin: 50px 0 0 0;
             max-width: inherit;
             display: flex;
             flex-direction: column;
             align-items: center;
 
-            strong{
+            strong {
                 border-bottom: 2px solid $black;
             }
 
-            div.content_info{
+            div.content_info {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
 
-                ul{
+                ul {
                     margin: 0 0 40px 0;
                     text-align: center;
 
-                    &::before{
+                    &::before {
                         content: "";
                         margin: 0;
                     }
                 }
             }
 
-            & div:nth-last-child(1){
+            & div:nth-last-child(1) {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
             }
         }
 
-        div.img{
+        div.img {
             margin: 20px 0 0 0;
             max-width: 300px;
             height: 300px;
         }
     }
-    section.sec4{
+
+    section.sec4 {
         justify-content: center;
         background-position: top;
 
-        div.cont{
+        div.cont {
             margin: 0 0 0 0;
 
-            h4{
+            h4 {
                 text-align: center;
             }
 
-            div.bg_contact{
+            div.bg_contact {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 row-gap: 20px;
                 text-align: center;
 
-                a{
+                a {
                     flex-direction: column;
                     align-items: inherit;
                     justify-content: center;
 
-                    img{
+                    img {
                         margin: 0 0 10px 0;
                     }
                 }
             }
         }
     }
-    div.main_ft{
+
+    div.main_ft {
         flex-direction: column;
 
-        div.txt_ft{
+        div.txt_ft {
             margin: 0 0 20px 0;
             text-align: center;
 
-            h4{
+            h4 {
                 max-width: none;
             }
         }
