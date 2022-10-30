@@ -89,3 +89,19 @@ function insertProjects(json){
     });
 }
 fetchJSON();
+
+const links = document.querySelectorAll("header nav span a");
+
+function handleLinks(event){
+    event.preventDefault();
+    window.location = event.target;
+    window.history.pushState(null, document.title, window.location.href.slice(0, window.location.href.indexOf("#")));
+
+    window.addEventListener("popstate", ()=>{
+        window.history.pushState(null, document.title, window.location.href.slice(0, window.location.href.indexOf("#")));
+    });
+}
+
+links.forEach((e)=>{
+    e.addEventListener("click", handleLinks);
+});
