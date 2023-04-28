@@ -16,7 +16,7 @@
         "id": 2,
         "name": "Nerdweb Clone",
         "description": "Feito para processo seletivo na própria empresa, o site é responsivo e utiliza da biblioteca \"SwiperJS na criação dos slides.\"",
-        "site": "https://nerdweb-site-reply.netlify.app/",
+        "site": "https://site-nerdweb-reply.netlify.app/",
         "github": "https://github.com/antoniosalabarbosa/nerdweb-test",
         "img": "./src/portifolio/nerdweb.jpg",
         "techs": [
