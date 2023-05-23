@@ -37,31 +37,5 @@
             "css.png",
             "js.png"
         ]
-    },
-    {
-        "id": 4,
-        "name": "Página de Ecommerce",
-        "description": "Página de Ecommerce de roupas. Utilizada para prática da linguagem JavaScript na manipulação do DOM.",
-        "site": "https://site-ecommerce-page-reply.netlify.app/",
-        "github": "https://github.com/antoniosalabarbosa/ecommerce-page",
-        "img": "./src/portifolio/ecommerce.jpg",
-        "techs": [
-            "html.png",
-            "css.png",
-            "js.png"
-        ]
-    },
-    {
-        "id": 5,
-        "name": "Site Mobile",
-        "description": "Planaforma para agendamento de visitas turísticos. (Em Desenvolvimento)",
-        "site": "https://site-mobile.netlify.app/",
-        "github": "https://github.com/antoniosalabarbosa/mobile-site-purple",
-        "img": "./src/portifolio/mobile.jpg",
-        "techs": [
-            "html.png",
-            "css.png",
-            "js.png"
-        ]
     }
 ]
