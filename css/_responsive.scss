@@ -26,20 +26,20 @@
     }
 
     nav span {
+        width: 50%;
+        height: 100%;
+        max-width: 500px;
+        min-width: 200px;
         position: fixed;
         top: 70px;
         right: -100%;
         z-index: 99;
-        width: 50%;
-        max-width: 500px;
-        min-width: 200px;
-        height: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         background-color: $white;
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-        transition: 200ms ease;
+        box-shadow: #00000040 0px 14px 28px, #00000038 0px 10px 10px;
+        transition: $transition;
 
         a {
             color: #000;
@@ -80,8 +80,8 @@
 
             a div.img-proj {
                 width: 100%;
-                min-height: 230px;
                 height: inherit;
+                min-height: 230px;
                 background-position: top left;
             }
         }
@@ -92,8 +92,8 @@
         align-items: center;
 
         div.informations {
-            margin: 50px 0 0 0;
             max-width: inherit;
+            margin: 50px 0 0 0;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -126,9 +126,9 @@
         }
 
         div.img {
-            margin: 20px 0 0 0;
-            max-width: 300px;
             height: 300px;
+            max-width: 300px;
+            margin: 20px 0 0 0;
         }
     }
 

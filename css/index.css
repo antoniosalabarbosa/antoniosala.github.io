@@ -7,26 +7,16 @@ a {
   text-decoration: none;
 }
 
-h1 {
-  margin: 10px 0 0 0;
-  padding: 0 10px;
-  color: #fff;
-  font-size: 40px;
-}
-
-h2 {
-  margin: 5px 0;
-  color: #fff;
-  font-size: 1.5rem;
-  font-weight: 100;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  line-height: 1.7;
-}
-
 h3 {
   color: #000;
   font-size: 2rem;
   text-transform: uppercase;
+}
+
+h4 {
+  margin: 0 0 20px 0;
+  color: #fff;
+  font-size: 2rem;
 }
 
 button {
@@ -52,53 +42,46 @@ section:target {
   margin: 0;
   border: 0;
   padding: 0;
-  font-family: "Ubuntu", Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
+}
+
+html, body {
+  scroll-behavior: smooth;
 }
 
 body {
   display: flex;
   justify-content: center;
-  scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
 #root {
-  max-width: 1600px;
   width: 100%;
   height: 100%;
+  max-width: 1600px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 header {
+  width: 100%;
+  height: 60px;
+  max-width: 1600px;
+  padding: 0 40px;
   position: fixed;
   top: 0;
   z-index: 99;
-  width: 100%;
-  max-width: 1600px;
-  height: 98px;
-}
-header div.hd_socials {
-  padding: 5px 40px;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  background-color: #222;
-}
-header div.hd_socials a img {
-  margin: 0 10px;
-  width: 30px;
+  background-color: #100A23;
 }
 
 nav {
-  padding: 15px 40px;
   width: 100%;
+  padding: 15px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #000;
 }
 nav strong {
   color: #fff;
@@ -128,46 +111,100 @@ nav div#burguer div.line {
 }
 
 section.sec1 {
-  margin: 98px 0 0 0;
-  min-height: 300px;
+  width: 100%;
+  height: 100vh;
+  max-height: 500px;
+  min-height: 200px;
+  margin: 60px 0 0 0;
+  padding: 0 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-image: url(../src/bg.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-section.sec1 .color-sec1 {
-  padding: 110px 0 20px 0;
-  width: 100%;
-  height: 100%;
-  min-height: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(7, 89, 95, 0.2705882353);
+
+main {
+  width: 100vw;
+  max-width: 600px;
 }
-section.sec1 #main_content {
-  border-radius: 20px;
-  padding: 10px 20px 20px 20px;
-  width: 90vw;
-  max-width: 450px;
+
+h1 {
+  color: #fff;
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+h2 {
+  margin: 0 0 20px 0;
+  color: rgba(255, 255, 255, 0.8117647059);
+  font-size: 1.2rem;
+  font-weight: 100;
+  line-height: 1.7;
+}
+
+.technologies_sec1 {
+  width: 100%;
+  margin: 20px 0 0 0;
+  display: flex;
+  flex-direction: row;
+}
+.technologies_sec1 .technology_sec1 {
+  margin: 0 40px 0 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+.technologies_sec1 .technology_sec1 img {
+  width: 40px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.technologies_sec1 .technology_sec1 span {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.github_infos_sec1 {
+  width: 100%;
+  margin: 20px 0 0 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  -moz-column-gap: clamp(40px, 15vw, 300px);
+       column-gap: clamp(40px, 15vw, 300px);
+}
+.github_infos_sec1 div {
   display: flex;
   flex-direction: column;
+  row-gap: 10px;
+}
+.github_infos_sec1 div strong {
+  color: #fff;
+  font-size: 2rem;
+}
+.github_infos_sec1 div p {
+  color: rgba(255, 255, 255, 0.768627451);
+  font-size: 1.2rem;
+}
+.github_infos_sec1 div img {
+  width: 40px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.github_infos_sec1 div a {
+  display: flex;
   align-items: center;
-  background-color: #222;
-  box-sizing: inherit;
-  text-align: center;
+  font-size: 1.3rem;
 }
-section.sec1 #main_content img {
-  margin: -100px 0 0 0;
-  border: 10px solid #06959f;
-  border-radius: 100%;
-  width: 230px;
-}
-section.sec1 #main_content span.line {
-  margin: 10px 0;
-  width: 90%;
-  height: 3px;
-  background-color: #fff;
+.github_infos_sec1 div a span {
+  margin: -7px 0 0 10px;
+  font-size: 2em;
 }
 
 section.sec2 {
@@ -176,43 +213,17 @@ section.sec2 {
   align-items: center;
 }
 section.sec2 div.line {
-  margin: 5px 0 0 0;
   width: calc(20% + 50px);
   height: 3px;
+  margin: 5px 0 0 0;
   background-color: #000;
 }
 section.sec2 div.cont {
-  margin: 20px 0 0 0;
   width: 100%;
+  margin: 20px 0 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-section.sec2 div.cont div.controls {
-  margin: 20px 0 0 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-section.sec2 div.cont div.controls .control {
-  margin: 0 20px;
-  border: 2px solid #696969;
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: 200ms ease;
-}
-section.sec2 div.cont div.controls .control.active {
-  background-color: rgba(85, 218, 228, 0.4823529412);
-}
-section.sec2 div.cont div.controls .control p {
-  cursor: pointer;
-}
-section.sec2 div.cont div.controls .control input[type=radio] {
-  cursor: pointer;
 }
 section.sec2 div.cont #view {
   margin: 0 0 11px 0;
@@ -221,29 +232,30 @@ section.sec2 div.cont #view {
   justify-content: center;
 }
 section.sec2 div.cont #view div.projeto {
+  width: 50vw;
+  max-width: 330px;
   margin: 20px 1vw;
   padding: 20px;
-  max-width: 330px;
-  width: 50vw;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   box-sizing: content-box;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  box-shadow: rgba(0, 0, 0, 0.1607843137) 0px 1px 4px;
   transition: 200ms ease;
 }
-section.sec2 div.cont #view div.projeto:hover {
-  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-}
 section.sec2 div.cont #view div.projeto a div.img-proj {
-  margin: 0 0 20px 0;
-  padding: 10px 20px;
   width: 330px;
   height: 200px;
+  margin: 0 0 20px 0;
+  padding: 10px 20px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+section.sec2 div.cont #view div.projeto div.txt-proj {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 section.sec2 div.cont #view div.projeto div.txt-proj div.icon_tec {
   width: 100%;
@@ -255,139 +267,65 @@ section.sec2 div.cont #view div.projeto div.txt-proj div.icon_tec img {
 }
 section.sec2 div.cont #view div.projeto div.txt-proj div.icon_tec img,
 section.sec2 div.cont #view div.projeto div.txt-proj div.view_in button img {
-  width: 100%;
-  height: 100%;
-  max-width: 30px;
-  max-height: 50px;
+  width: 30px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 section.sec2 div.cont #view div.projeto div.txt-proj div.line {
-  margin: 4px 0;
   width: 100%;
   height: 3px;
-  background-color: #06959f;
+  margin: 10px 0;
 }
 section.sec2 div.cont #view div.projeto div.txt-proj strong {
-  margin: 0 0 10px 0;
   font-size: 1.2rem;
-  color: #222;
 }
 section.sec2 div.cont #view div.projeto div.txt-proj p {
-  margin: 20px 0;
-  font-size: 1.1rem;
+  margin: 10px 0 20px 0;
+  font-size: 1rem;
+  line-height: 1.3;
 }
 section.sec2 div.cont #view div.projeto div.txt-proj div.view_in {
-  width: 100%;
+  height: 100%;
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
 }
+section.sec2 div.cont #view div.projeto div.txt-proj div.view_in a {
+  align-self: flex-end;
+}
 section.sec2 div.cont #view div.projeto div.txt-proj div.view_in a button {
-  margin: 0 10px;
-  padding: 7px 14px;
+  margin: 0 20px 0 0;
+  padding: 7px 20px;
   display: flex;
   align-items: center;
   font-size: 1.2rem;
   color: #fff;
-  background-color: #014f8e;
+  background-color: #41326C;
 }
 section.sec2 div.cont #view div.projeto div.txt-proj div.view_in a button:hover {
-  background-color: #69ade4;
+  background-color: #705DA4;
 }
 section.sec2 div.cont #view div.projeto div.txt-proj div.view_in a button img {
   margin: 0 0 0 10px;
 }
 
-section.sec3 {
-  padding: 30px 40px;
-  flex-direction: column;
-  align-items: center;
-}
-section.sec3 div.line {
-  margin: 5px 0 30px 0;
-  width: calc(20% + 50px);
-  height: 3px;
-  background-color: #000;
-}
-section.sec3 div.cont {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-section.sec3 div.cont div.informations {
-  max-width: 560px;
-}
-section.sec3 div.cont div.informations div.content_info strong {
-  font-size: 1.5rem;
-}
-section.sec3 div.cont div.informations div.content_info ul {
-  margin: 0 0 40px 20px;
-}
-section.sec3 div.cont div.informations div.content_info ul li {
-  margin: 20px 0;
-  max-width: 430px;
-  list-style: none;
-  font-size: 1.3rem;
-  font-family: Georgia, "Times New Roman", Times, serif;
-}
-section.sec3 div.cont div.informations div.content_info ul li::before {
-  content: "-";
-  margin: 0 10px 0 0;
-}
-section.sec3 div.cont div.informations div div.techs {
-  margin: 30px 0 30px 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-}
-section.sec3 div.cont div.informations div div.techs img {
-  margin: 10px;
-  width: 60px;
-}
-section.sec3 div.cont div.informations div div.techs img:nth-of-type(n + 3) {
-  width: 70px;
-  height: 70px;
-}
-section.sec3 div.cont div.img {
-  margin: 0 0 0 60px;
-  border-radius: 30px;
-  min-width: 100px;
-  max-width: 280px;
-  width: 100%;
-  height: 330px;
-  background-image: url(../src/antonio2.jpg);
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-}
-
 button.btn_download {
   padding: 15px 50px;
   font-size: 1.25rem;
-  color: #fff;
-  background-color: #06959f;
-}
-button.btn_download.btn_download:hover {
-  background-color: #37b0b9;
 }
 
 section.sec4 {
-  justify-content: flex-end;
   padding: 40px 40px;
+  justify-content: flex-end;
   background-image: url(../src/bg2.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 section.sec4 div.cont {
-  margin: 0 40px 0 0;
   width: 100vw;
   max-width: 600px;
-}
-section.sec4 div.cont h4 {
-  margin: 0 0 20px 0;
-  color: #fff;
-  font-size: 2rem;
+  margin: 0 40px 0 0;
 }
 section.sec4 div.cont div.bg_contact {
   padding: 20px 40px;
@@ -400,10 +338,11 @@ section.sec4 div.cont div.bg_contact img {
   width: 60px;
 }
 section.sec4 div.cont div.bg_contact a {
-  margin: 20px 0;
   width: 100%;
+  margin: 20px 0;
   display: flex;
   align-items: center;
+  color: #100A23;
 }
 section.sec4 div.cont div.bg_contact a img {
   margin: 0 20px 0 0;
@@ -411,23 +350,23 @@ section.sec4 div.cont div.bg_contact a img {
 section.sec4 div.cont div.bg_contact a span {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #222;
   display: flex;
   align-items: center;
 }
 
 footer {
-  padding: 30px calc(10vw - 20px);
   width: 100%;
-  background-color: #111;
+  border-top: 5px solid #A3026D;
+  padding: 30px 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: rgb(12, 10, 21);
 }
 footer div.main_ft {
+  width: 100%;
   border-bottom: 3px solid #fff;
   padding: 0 30px 20px 30px;
-  width: 90%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -446,8 +385,8 @@ footer div.main_ft div.txt_ft div.btns_cont {
   flex-direction: column;
 }
 footer > div:nth-child(2) {
-  padding: 10px 0;
   width: 100%;
+  padding: 10px 0;
   display: flex;
   justify-content: center;
 }
@@ -459,167 +398,11 @@ button.btn_download-2 {
   margin: 3px 0;
   padding: 13px 23px;
   font-size: 18px;
-  color: #fff;
-  background-color: #06959f;
-}
-button.btn_download-2:hover {
-  background-color: #37b0b9;
 }
 
 button.btn_orcamento {
   margin: 3px 0;
-  border: 3px solid #06959f;
   padding: 10px 20px;
   font-size: 1.25rem;
-  color: #06959f;
-  background-color: #fff;
   transition: 200ms ease;
-}
-button.btn_orcamento:hover {
-  border: 3px solid #fff;
-  color: #fff;
-  background-color: #06959f;
-}
-
-@media screen and (min-width: 1900px) {
-  #view {
-    max-width: unset !important;
-    width: 100%;
-  }
-}
-@media screen and (max-width: 1421px) {
-  #view {
-    justify-content: center !important;
-  }
-}
-@media screen and (max-width: 880px) {
-  section.sec1 {
-    margin: 70px 0 0 0;
-  }
-  section:target {
-    scroll-margin-top: 58px;
-  }
-  header div.hd_socials {
-    display: none;
-  }
-  nav span {
-    position: fixed;
-    top: 70px;
-    right: -100%;
-    z-index: 99;
-    width: 50%;
-    max-width: 500px;
-    min-width: 200px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #fff;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-    transition: 200ms ease;
-  }
-  nav span a {
-    color: #000;
-    margin: calc(5vw + 10px) 0 0 0;
-  }
-  div#burguer {
-    display: flex !important;
-    cursor: pointer;
-  }
-  div#burguer div.line {
-    transition: 200ms ease;
-  }
-  div#burguer.active div.line:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 10px);
-  }
-  div#burguer.active div.line:nth-child(2) {
-    opacity: 0;
-  }
-  div#burguer.active div.line:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -11px);
-  }
-  section.sec2 div.line {
-    margin: 5px 0;
-  }
-  section.sec2 div.cont #view div.projeto {
-    width: 70vw;
-  }
-  section.sec2 div.cont #view div.projeto a div.img-proj {
-    width: 100%;
-    min-height: 230px;
-    height: inherit;
-    background-position: top left;
-  }
-  section.sec3 div.cont {
-    flex-direction: column-reverse;
-    align-items: center;
-  }
-  section.sec3 div.cont div.informations {
-    margin: 50px 0 0 0;
-    max-width: inherit;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  section.sec3 div.cont div.informations strong {
-    border-bottom: 2px solid #000;
-  }
-  section.sec3 div.cont div.informations div.content_info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  section.sec3 div.cont div.informations div.content_info ul {
-    margin: 0 0 40px 0;
-    text-align: center;
-  }
-  section.sec3 div.cont div.informations div.content_info ul::before {
-    content: "";
-    margin: 0;
-  }
-  section.sec3 div.cont div.informations div:nth-last-child(1) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  section.sec3 div.cont div.img {
-    margin: 20px 0 0 0;
-    max-width: 300px;
-    height: 300px;
-  }
-  section.sec4 {
-    justify-content: center;
-    background-position: top;
-  }
-  section.sec4 div.cont {
-    margin: 0 0 0 0;
-  }
-  section.sec4 div.cont h4 {
-    text-align: center;
-  }
-  section.sec4 div.cont div.bg_contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 20px;
-    text-align: center;
-  }
-  section.sec4 div.cont div.bg_contact a {
-    flex-direction: column;
-    align-items: inherit;
-    justify-content: center;
-  }
-  section.sec4 div.cont div.bg_contact a img {
-    margin: 0 0 10px 0;
-  }
-  div.main_ft {
-    flex-direction: column;
-  }
-  div.main_ft div.txt_ft {
-    margin: 0 0 20px 0;
-    text-align: center;
-  }
-  div.main_ft div.txt_ft h4 {
-    max-width: none;
-  }
 }/*# sourceMappingURL=index.css.map */

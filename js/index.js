@@ -16,6 +16,7 @@ burguer.addEventListener("click", ()=>{
 btn_download.forEach(e => e.addEventListener("click", ()=> window.open("../src/CV_Antonio_Sala_Barbosa.pdf")));
 
 const label_control = document.querySelectorAll("label.control");
+
 label_control.forEach((e)=>{
     e.addEventListener("click", ()=>{
         for(let i = 0; i<3; i++){
@@ -89,19 +90,3 @@ function insertProjects(json){
     });
 }
 fetchJSON();
-
-const links = document.querySelectorAll("header nav span a");
-
-function handleLinks(event){
-    event.preventDefault();
-    window.location = event.target;
-    window.history.pushState(null, document.title, window.location.href.slice(0, window.location.href.indexOf("#")));
-
-    window.addEventListener("popstate", ()=>{
-        window.history.pushState(null, document.title, window.location.href.slice(0, window.location.href.indexOf("#")));
-    });
-}
-
-links.forEach((e)=>{
-    e.addEventListener("click", handleLinks);
-});
