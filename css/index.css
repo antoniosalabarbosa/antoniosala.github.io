@@ -1,6 +1,24 @@
 @charset "UTF-8";
+:root {
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
 html, body {
   scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
 }
 
 a {
@@ -34,27 +52,11 @@ section {
 section:target {
   scroll-margin-top: 60px;
 }
-
-:root {
-  font-size: 16px;
-}
-
-* {
-  margin: 0;
-  border: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  box-sizing: border-box;
-}
-
-html, body {
-  scroll-behavior: smooth;
-}
-
-body {
-  display: flex;
-  justify-content: center;
-  overflow-x: hidden;
+section div.line {
+  width: calc(20% + 50px);
+  height: 3px;
+  margin: 5px 0 0 0;
+  background-color: #000;
 }
 
 #root {
@@ -63,7 +65,12 @@ body {
   max-width: 1600px;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   align-items: center;
+  justify-content: initial;
+  -moz-column-gap: 0px;
+       column-gap: 0px;
+  row-gap: 0px;
 }
 
 header {
@@ -81,8 +88,13 @@ nav {
   width: 100%;
   padding: 15px 0;
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: initial;
   align-items: center;
+  justify-content: space-between;
+  -moz-column-gap: 0px;
+       column-gap: 0px;
+  row-gap: 0px;
 }
 nav strong {
   color: #fff;
@@ -112,13 +124,11 @@ nav div#burguer div.line {
 }
 
 section.home {
-  width: 100%;
   height: 100vh;
   max-height: 500px;
   min-height: 200px;
   margin: 60px 0 0 0;
   padding: 0 80px;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   background-image: url(../src/bg.jpg);
@@ -153,15 +163,22 @@ h2 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-items: initial;
+  justify-content: initial;
+  -moz-column-gap: 0;
+       column-gap: 0;
   row-gap: 20px;
 }
 .technologies_home .technology_home {
   margin: 0 40px 0 0;
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
   align-items: center;
+  justify-content: initial;
   -moz-column-gap: 10px;
        column-gap: 10px;
+  row-gap: 0px;
 }
 .technologies_home .technology_home img {
   width: 40px;
@@ -179,13 +196,21 @@ h2 {
   margin: 20px 0 0 0;
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
   align-items: center;
+  justify-content: initial;
   -moz-column-gap: clamp(40px, 10vw, 200px);
        column-gap: clamp(40px, 10vw, 200px);
+  row-gap: 0px;
 }
 .github_infos_home div {
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: initial;
+  justify-content: initial;
+  -moz-column-gap: 0px;
+       column-gap: 0px;
   row-gap: 10px;
 }
 .github_infos_home div strong {
@@ -203,7 +228,13 @@ h2 {
 }
 .github_infos_home div a {
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   align-items: center;
+  justify-content: initial;
+  -moz-column-gap: 0px;
+       column-gap: 0px;
+  row-gap: 0px;
   font-size: 1.3rem;
 }
 .github_infos_home div a span {
@@ -213,27 +244,37 @@ h2 {
 
 section.projects {
   padding: 30px 10px;
+  display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   align-items: center;
-}
-section.projects div.line {
-  width: calc(20% + 50px);
-  height: 3px;
-  margin: 5px 0 0 0;
-  background-color: #000;
+  justify-content: initial;
+  -moz-column-gap: 0px;
+       column-gap: 0px;
+  row-gap: 0px;
 }
 section.projects div.cont {
   width: 100%;
   margin: 20px 0 0 0;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   align-items: center;
+  justify-content: initial;
+  -moz-column-gap: 0px;
+       column-gap: 0px;
+  row-gap: 0px;
 }
 section.projects div.cont #view {
   margin: 0 0 11px 0;
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
+  align-items: initial;
   justify-content: center;
+  -moz-column-gap: 0px;
+       column-gap: 0px;
+  row-gap: 0px;
 }
 section.projects div.cont #view div.projeto {
   width: 50vw;
@@ -242,6 +283,12 @@ section.projects div.cont #view div.projeto {
   padding: 20px;
   display: flex;
   flex-direction: column;
+  flex-wrap: initial;
+  align-items: initial;
+  justify-content: initial;
+  -moz-column-gap: 0px;
+       column-gap: 0px;
+  row-gap: 0px;
   box-sizing: content-box;
   box-shadow: rgba(0, 0, 0, 0.1607843137) 0px 1px 4px;
   transition: 200ms ease;
@@ -260,11 +307,23 @@ section.projects div.cont #view div.projeto div.txt-proj {
   height: 100%;
   display: flex;
   flex-direction: column;
+  flex-wrap: initial;
+  align-items: initial;
+  justify-content: initial;
+  -moz-column-gap: 0px;
+       column-gap: 0px;
+  row-gap: 0px;
 }
 section.projects div.cont #view div.projeto div.txt-proj div.icon_tec {
   width: 100%;
   display: flex;
+  flex-direction: initial;
+  flex-wrap: initial;
   align-items: center;
+  justify-content: initial;
+  -moz-column-gap: 0px;
+       column-gap: 0px;
+  row-gap: 0px;
 }
 section.projects div.cont #view div.projeto div.txt-proj div.icon_tec img {
   margin: 0 5px;
@@ -293,6 +352,11 @@ section.projects div.cont #view div.projeto div.txt-proj div.view_in {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-items: initial;
+  justify-content: initial;
+  -moz-column-gap: 0px;
+       column-gap: 0px;
+  row-gap: 0px;
 }
 section.projects div.cont #view div.projeto div.txt-proj div.view_in a {
   align-self: flex-end;
@@ -301,7 +365,13 @@ section.projects div.cont #view div.projeto div.txt-proj div.view_in a button {
   margin: 0 20px 0 0;
   padding: 7px 20px;
   display: flex;
+  flex-direction: initial;
+  flex-wrap: initial;
   align-items: center;
+  justify-content: initial;
+  -moz-column-gap: 0px;
+       column-gap: 0px;
+  row-gap: 0px;
   font-size: 1.2rem;
   color: #fff;
   background-color: #41326C;
@@ -335,6 +405,12 @@ section.contact div.cont div.bg_contact {
   padding: 20px 40px;
   display: flex;
   flex-direction: column;
+  flex-wrap: initial;
+  align-items: initial;
+  justify-content: initial;
+  -moz-column-gap: 0px;
+       column-gap: 0px;
+  row-gap: 0px;
   background-color: #fff;
   box-sizing: content-box;
 }
@@ -345,7 +421,13 @@ section.contact div.cont div.bg_contact a {
   width: 100%;
   margin: 20px 0;
   display: flex;
+  flex-direction: initial;
+  flex-wrap: initial;
   align-items: center;
+  justify-content: initial;
+  -moz-column-gap: 0px;
+       column-gap: 0px;
+  row-gap: 0px;
   color: #100A23;
 }
 section.contact div.cont div.bg_contact a img {
@@ -357,8 +439,13 @@ section.contact div.cont div.bg_contact a span {
   font-size: 1.5rem;
   font-weight: bold;
   display: flex;
+  flex-direction: initial;
+  flex-wrap: initial;
   align-items: center;
   justify-content: space-between;
+  -moz-column-gap: 0px;
+       column-gap: 0px;
+  row-gap: 0px;
 }
 section.contact div.cont div.bg_contact a span::after {
   content: "→";
@@ -371,7 +458,12 @@ footer {
   padding: 30px 40px;
   display: flex;
   flex-direction: column;
+  flex-wrap: initial;
   align-items: center;
+  justify-content: initial;
+  -moz-column-gap: 0px;
+       column-gap: 0px;
+  row-gap: 0px;
   background-color: rgb(12, 10, 21);
 }
 footer div.main_ft {
@@ -379,8 +471,13 @@ footer div.main_ft {
   border-bottom: 3px solid #fff;
   padding: 0 30px 20px 30px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: initial;
+  flex-wrap: initial;
   align-items: center;
+  justify-content: space-between;
+  -moz-column-gap: 0px;
+       column-gap: 0px;
+  row-gap: 0px;
 }
 footer div.main_ft div.txt_ft h4 {
   max-width: 350px;
@@ -394,12 +491,24 @@ footer div.main_ft div.txt_ft span {
 footer div.main_ft div.txt_ft div.btns_cont {
   display: flex;
   flex-direction: column;
+  flex-wrap: initial;
+  align-items: initial;
+  justify-content: initial;
+  -moz-column-gap: 0px;
+       column-gap: 0px;
+  row-gap: 0px;
 }
 footer > div:nth-child(2) {
   width: 100%;
   padding: 10px 0;
   display: flex;
+  flex-direction: initial;
+  flex-wrap: initial;
+  align-items: initial;
   justify-content: center;
+  -moz-column-gap: 0px;
+       column-gap: 0px;
+  row-gap: 0px;
 }
 footer > div:nth-child(2) img {
   margin: 0 10px;
@@ -418,17 +527,6 @@ button.btn_orcamento {
   transition: 200ms ease;
 }
 
-@media screen and (min-width: 1900px) {
-  #view {
-    max-width: unset !important;
-    width: 100%;
-  }
-}
-@media screen and (max-width: 1421px) {
-  #view {
-    justify-content: center !important;
-  }
-}
 @media screen and (max-width: 880px) {
   header div.hd_socials {
     display: none;
@@ -444,7 +542,12 @@ button.btn_orcamento {
     z-index: 99;
     display: flex;
     flex-direction: column;
+    flex-wrap: initial;
     align-items: center;
+    justify-content: initial;
+    -moz-column-gap: 0px;
+         column-gap: 0px;
+    row-gap: 0px;
     background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.2509803922) 0px 14px 28px, rgba(0, 0, 0, 0.2196078431) 0px 10px 10px;
     transition: 200ms ease;
@@ -491,9 +594,12 @@ button.btn_orcamento {
     margin: 0 40px 0 0;
     display: flex;
     flex-direction: row;
+    flex-wrap: initial;
     align-items: center;
-    -moz-column-gap: 10px;
-         column-gap: 10px;
+    justify-content: initial;
+    -moz-column-gap: 0px;
+         column-gap: 0px;
+    row-gap: 10px;
   }
   .technologies_home .technology_home img {
     width: 40px;
@@ -506,8 +612,13 @@ button.btn_orcamento {
     font-weight: bold;
   }
   .github_infos_home {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: initial;
+    justify-content: initial;
+    -moz-column-gap: 0px;
+         column-gap: 0px;
     row-gap: 40px;
   }
   .github_infos_home .github_link {
@@ -542,16 +653,25 @@ button.btn_orcamento {
   section.contact div.cont div.bg_contact {
     display: flex;
     flex-direction: column;
+    flex-wrap: initial;
     align-items: center;
+    justify-content: initial;
+    -moz-column-gap: 0px;
+         column-gap: 0px;
     row-gap: 20px;
     text-align: center;
   }
   section.contact div.cont div.bg_contact a {
+    display: flex;
     flex-direction: column;
+    flex-wrap: initial;
     align-items: inherit;
     justify-content: center;
+    -moz-column-gap: 0px;
+         column-gap: 0px;
+    row-gap: 0px;
   }
-  section.contact div.cont div.bg_contact a img {
+  section.contact div.cont div.bg_contact a ¡ img {
     margin: 0 0 10px 0;
   }
   section.contact div.cont div.bg_contact a span {
@@ -561,7 +681,7 @@ button.btn_orcamento {
     display: none;
   }
   div.main_ft {
-    flex-direction: column;
+    flex-direction: column !important;
   }
   div.main_ft div.txt_ft {
     margin: 0 0 20px 0;

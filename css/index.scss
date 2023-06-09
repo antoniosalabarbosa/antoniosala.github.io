@@ -1,8 +1,10 @@
-@import './extra';
+@import './variables';
+@import './mixins';
 
 :root{
     font-size: 16px;
 }
+
 *{
     margin: 0;
     border: 0;
@@ -20,13 +22,54 @@ body{
     justify-content: center;
     overflow-x: hidden;
 }
+
+a{
+    color: $white;
+    text-decoration: none;
+}
+
+h3{
+    color: $black;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+h4{
+    margin: 0 0 20px 0;
+    color: $white;
+    font-size: 2rem;
+}
+
+button{
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: $transition;
+}
+
+
+section{
+    width: 100%;
+    display: flex;
+
+    &:target{
+        scroll-margin-top: 60px;
+    }
+
+    div.line{
+        width: calc(20% + 50px);
+        height: 3px;
+        margin: 5px 0 0 0;
+        background-color: $black;
+    }
+}
+
 #root{
     width: 100%;
     height: 100%;
     max-width: 1600px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex(column, nowrap, center);
+
 }
 header{
     width: 100%;
@@ -41,9 +84,7 @@ header{
 nav{
     width: 100%;
     padding: 15px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex(row, initial, center, space-between);
     
     strong{
         color: $white;
@@ -77,13 +118,11 @@ nav{
     }
 }
 section.home{
-    width: 100%;
     height: 100vh;
     max-height: 500px;
     min-height: 200px;
     margin: 60px 0 0 0;
     padding: 0 calc($pad * 2);
-    display: flex;
     flex-direction: column;
     justify-content: center;
     background-image: url(../src/bg.jpg);
@@ -114,17 +153,11 @@ h2{
     width: 100%;
     margin: 20px 0 0 0;
     padding: 0 10vw 0 0;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    row-gap: 20px;
+    @include flex(row, wrap, initial, initial, 20px, 0);
 
     .technology_home{
         margin: 0 40px 0 0;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        column-gap: 10px;
+        @include flex(row, nowrap, center, initial, 0px, 10px);
     
         img{
             width: 40px;
@@ -142,15 +175,10 @@ h2{
 .github_infos_home{
     width: 100%;
     margin: 20px 0 0 0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    column-gap: clamp(40px, 10vw, 200px);
+    @include flex(row, nowrap, center, initial, 0px, clamp(40px, 10vw, 200px));
 
     div {
-        display: flex;
-        flex-direction: column;
-        row-gap: 10px;
+        @include flex(column, nowrap, initial, initial, 10px, 0px);
 
         strong{
             color: $white;
@@ -168,8 +196,7 @@ h2{
         }
 
         a{
-            display: flex;
-            align-items: center;
+            @include flex(row, nowrap, center, initial, 0px, 0px);
             font-size: 1.3rem;
 
             span{
@@ -182,36 +209,23 @@ h2{
 
 section.projects{
     padding: 30px 10px;
-    flex-direction: column;
-    align-items: center;
-
-    div.line{
-        width: calc(20% + 50px);
-        height: 3px;
-        margin: 5px 0 0 0;
-        background-color: $black;
-    }
+    @include flex(column, nowrap, center, initial, 0px, 0px);
 
     div.cont{
         width: 100%;
         margin: 20px 0 0 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flex(column, nowrap, center, initial, 0px, 0px);
 
         #view{
             margin: 0 0 11px 0;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            @include flex(row, wrap, initial, center, 0px, 0px);
             
             div.projeto{
                 width: 50vw;
                 max-width: 330px;
                 margin: 20px 1vw;
                 padding: 20px;
-                display: flex;
-                flex-direction: column;
+                @include flex(column, initial, initial, initial, 0px, 0px);
                 box-sizing: content-box;
                 box-shadow: #00000029 0px 1px 4px;
                 transition: $transition;
@@ -229,13 +243,11 @@ section.projects{
 
                 div.txt-proj{
                     height: 100%;
-                    display: flex;
-                    flex-direction: column;
+                    @include flex(column, initial, initial, initial, 0px, 0px);
                     
                     div.icon_tec{
                         width: 100%;
-                        display: flex;
-                        align-items: center;
+                        @include flex(initial, initial, center, initial, 0px, 0px);
 
                         img{
                             margin: 0 5px;
@@ -264,9 +276,7 @@ section.projects{
 
                     div.view_in{
                         height: 100%;
-                        display: flex;
-                        flex-direction: row;
-                        flex-wrap: wrap;
+                        @include flex(row, wrap, initial, initial, 0px, 0px);
 
                         a{
                             align-self: flex-end;
@@ -274,8 +284,7 @@ section.projects{
                             button{
                                 margin: 0 20px 0 0;
                                 padding: 7px 20px;
-                                display: flex;
-                                align-items: center;
+                                @include flex(initial, initial, center, initial, 0px, 0px);
                                 font-size: 1.2rem;
                                 color: $white;
                                 background-color: $purple4;
@@ -316,8 +325,7 @@ section.contact{
 
         div.bg_contact{
             padding: 20px 40px;
-            display: flex;
-            flex-direction: column;
+            @include flex(column, initial, initial, initial, 0px, 0px);
             background-color: $white;
             box-sizing: content-box;
 
@@ -328,8 +336,7 @@ section.contact{
             a{
                 width: 100%;
                 margin: 20px 0;
-                display: flex;
-                align-items: center;
+                @include flex(initial, initial, center, initial, 0px, 0px);
                 color: $purple0;
 
                 img{
@@ -341,9 +348,7 @@ section.contact{
                     min-width: 200px;
                     font-size: 1.5rem;
                     font-weight: bold;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
+                    @include flex(initial, initial, center, space-between, 0px, 0px);
 
                     &::after{
                         content: "→";
@@ -358,18 +363,14 @@ footer{
     width: 100%;
     border-top: 5px solid $pink0;
     padding: 30px $pad;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex(column, initial, center, initial, 0px, 0px);
     background-color: $gray;
 
     div.main_ft{
         width: 100%;
         border-bottom: 3px solid $white;
         padding: 0 30px 20px 30px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include flex(initial, initial, center, space-between, 0px, 0px);
 
         div.txt_ft{
             h4{
@@ -382,8 +383,7 @@ footer{
                 font-size: 18px;
             }
             div.btns_cont{
-                display: flex;
-                flex-direction: column;
+                @include flex(column, initial, initial, initial, 0px, 0px);
             }
         }
     }
@@ -391,8 +391,7 @@ footer{
     & > div:nth-child(2){
         width: 100%;
         padding: 10px 0;
-        display: flex;
-        justify-content: center;
+        @include flex(initial, initial, initial, center, 0px, 0px);
 
         img{
             margin: 0 10px;

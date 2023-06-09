@@ -1,0 +1,16 @@
+@mixin flex(
+    $direction: column,
+    $wrap: nowrap,
+    $align: initial,
+    $justify: initial,
+    $row_gap: 0px,
+    $col_gap: 0px
+){
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    align-items: $align;
+    justify-content: $justify;
+    column-gap: $col_gap;
+    row-gap: $row_gap;
+}
