@@ -1,28 +1,22 @@
-const burguer = document.getElementById("burguer");
 const menu_res = document.querySelector("nav span");
 const btn_download = document.querySelectorAll("button.download");
+const github_info = {
+    repository: document.querySelector("div.github_info:nth-child(1) strong"),
+    followers: document.querySelector("div.github_info:nth-child(2) strong")
+};
 
 burguer.addEventListener("click", ()=>{
     if(menu_res.style.right == '0%'){
         menu_res.style.right = '-100%';
-        burguer.classList.remove("active");
     }
     else{
         menu_res.style.right = '0%';
-        burguer.classList.add("active");
     }
 });
 
-btn_download.forEach(e => e.addEventListener("click", ()=> window.open("../src/CV_Antonio_Sala_Barbosa.pdf")));
-
-const label_control = document.querySelectorAll("label.control");
-
-label_control.forEach((e)=>{
-    e.addEventListener("click", ()=>{
-        for(let i = 0; i<3; i++){
-            label_control[i].classList.remove("active");
-        }
-        e.classList.add("active");
+btn_download.forEach(e => {
+    e.addEventListener("click", () => {
+        window.open("../src/CV_Antonio_Sala_Barbosa.pdf")
     });
 });
 
@@ -90,3 +84,16 @@ function insertProjects(json){
     });
 }
 fetchJSON();
+
+const githubData = async ()=>{
+    const user_infor = await fetch("https://api.github.com/users/antoniosalabarbosa")
+    .then(res => res.json())
+    .then( json => json);
+
+    github_info.repository.textContent = await user_infor.public_repos;
+    github_info.followers.textContent = await user_infor.followers;
+
+    return user_infor;
+};
+
+githubData();

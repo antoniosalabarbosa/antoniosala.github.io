@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body {
   scroll-behavior: smooth;
 }
@@ -31,7 +32,7 @@ section {
   display: flex;
 }
 section:target {
-  scroll-margin-top: 95px;
+  scroll-margin-top: 60px;
 }
 
 :root {
@@ -110,7 +111,7 @@ nav div#burguer div.line {
   background-color: #fff;
 }
 
-section.sec1 {
+section.home {
   width: 100%;
   height: 100vh;
   max-height: 500px;
@@ -145,13 +146,16 @@ h2 {
   line-height: 1.7;
 }
 
-.technologies_sec1 {
+.technologies_home {
   width: 100%;
   margin: 20px 0 0 0;
+  padding: 0 10vw 0 0;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 20px;
 }
-.technologies_sec1 .technology_sec1 {
+.technologies_home .technology_home {
   margin: 0 40px 0 0;
   display: flex;
   flex-direction: row;
@@ -159,79 +163,79 @@ h2 {
   -moz-column-gap: 10px;
        column-gap: 10px;
 }
-.technologies_sec1 .technology_sec1 img {
+.technologies_home .technology_home img {
   width: 40px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.technologies_sec1 .technology_sec1 span {
+.technologies_home .technology_home span {
   color: #fff;
   font-size: 1.2rem;
   font-weight: bold;
 }
 
-.github_infos_sec1 {
+.github_infos_home {
   width: 100%;
   margin: 20px 0 0 0;
   display: flex;
   flex-direction: row;
   align-items: center;
-  -moz-column-gap: clamp(40px, 15vw, 300px);
-       column-gap: clamp(40px, 15vw, 300px);
+  -moz-column-gap: clamp(40px, 10vw, 200px);
+       column-gap: clamp(40px, 10vw, 200px);
 }
-.github_infos_sec1 div {
+.github_infos_home div {
   display: flex;
   flex-direction: column;
   row-gap: 10px;
 }
-.github_infos_sec1 div strong {
+.github_infos_home div strong {
   color: #fff;
   font-size: 2rem;
 }
-.github_infos_sec1 div p {
+.github_infos_home div p {
   color: rgba(255, 255, 255, 0.768627451);
   font-size: 1.2rem;
 }
-.github_infos_sec1 div img {
+.github_infos_home div img {
   width: 40px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.github_infos_sec1 div a {
+.github_infos_home div a {
   display: flex;
   align-items: center;
   font-size: 1.3rem;
 }
-.github_infos_sec1 div a span {
+.github_infos_home div a span {
   margin: -7px 0 0 10px;
   font-size: 2em;
 }
 
-section.sec2 {
+section.projects {
   padding: 30px 10px;
   flex-direction: column;
   align-items: center;
 }
-section.sec2 div.line {
+section.projects div.line {
   width: calc(20% + 50px);
   height: 3px;
   margin: 5px 0 0 0;
   background-color: #000;
 }
-section.sec2 div.cont {
+section.projects div.cont {
   width: 100%;
   margin: 20px 0 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-section.sec2 div.cont #view {
+section.projects div.cont #view {
   margin: 0 0 11px 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-section.sec2 div.cont #view div.projeto {
+section.projects div.cont #view div.projeto {
   width: 50vw;
   max-width: 330px;
   margin: 20px 1vw;
@@ -242,7 +246,7 @@ section.sec2 div.cont #view div.projeto {
   box-shadow: rgba(0, 0, 0, 0.1607843137) 0px 1px 4px;
   transition: 200ms ease;
 }
-section.sec2 div.cont #view div.projeto a div.img-proj {
+section.projects div.cont #view div.projeto a div.img-proj {
   width: 330px;
   height: 200px;
   margin: 0 0 20px 0;
@@ -252,48 +256,48 @@ section.sec2 div.cont #view div.projeto a div.img-proj {
   background-repeat: no-repeat;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
-section.sec2 div.cont #view div.projeto div.txt-proj {
+section.projects div.cont #view div.projeto div.txt-proj {
   height: 100%;
   display: flex;
   flex-direction: column;
 }
-section.sec2 div.cont #view div.projeto div.txt-proj div.icon_tec {
+section.projects div.cont #view div.projeto div.txt-proj div.icon_tec {
   width: 100%;
   display: flex;
   align-items: center;
 }
-section.sec2 div.cont #view div.projeto div.txt-proj div.icon_tec img {
+section.projects div.cont #view div.projeto div.txt-proj div.icon_tec img {
   margin: 0 5px;
 }
-section.sec2 div.cont #view div.projeto div.txt-proj div.icon_tec img,
-section.sec2 div.cont #view div.projeto div.txt-proj div.view_in button img {
+section.projects div.cont #view div.projeto div.txt-proj div.icon_tec img,
+section.projects div.cont #view div.projeto div.txt-proj div.view_in button img {
   width: 30px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-section.sec2 div.cont #view div.projeto div.txt-proj div.line {
+section.projects div.cont #view div.projeto div.txt-proj div.line {
   width: 100%;
   height: 3px;
   margin: 10px 0;
 }
-section.sec2 div.cont #view div.projeto div.txt-proj strong {
+section.projects div.cont #view div.projeto div.txt-proj strong {
   font-size: 1.2rem;
 }
-section.sec2 div.cont #view div.projeto div.txt-proj p {
+section.projects div.cont #view div.projeto div.txt-proj p {
   margin: 10px 0 20px 0;
   font-size: 1rem;
   line-height: 1.3;
 }
-section.sec2 div.cont #view div.projeto div.txt-proj div.view_in {
+section.projects div.cont #view div.projeto div.txt-proj div.view_in {
   height: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
-section.sec2 div.cont #view div.projeto div.txt-proj div.view_in a {
+section.projects div.cont #view div.projeto div.txt-proj div.view_in a {
   align-self: flex-end;
 }
-section.sec2 div.cont #view div.projeto div.txt-proj div.view_in a button {
+section.projects div.cont #view div.projeto div.txt-proj div.view_in a button {
   margin: 0 20px 0 0;
   padding: 7px 20px;
   display: flex;
@@ -302,10 +306,10 @@ section.sec2 div.cont #view div.projeto div.txt-proj div.view_in a button {
   color: #fff;
   background-color: #41326C;
 }
-section.sec2 div.cont #view div.projeto div.txt-proj div.view_in a button:hover {
+section.projects div.cont #view div.projeto div.txt-proj div.view_in a button:hover {
   background-color: #705DA4;
 }
-section.sec2 div.cont #view div.projeto div.txt-proj div.view_in a button img {
+section.projects div.cont #view div.projeto div.txt-proj div.view_in a button img {
   margin: 0 0 0 10px;
 }
 
@@ -314,7 +318,7 @@ button.btn_download {
   font-size: 1.25rem;
 }
 
-section.sec4 {
+section.contact {
   padding: 40px 40px;
   justify-content: flex-end;
   background-image: url(../src/bg2.jpg);
@@ -322,36 +326,43 @@ section.sec4 {
   background-size: cover;
   background-repeat: no-repeat;
 }
-section.sec4 div.cont {
+section.contact div.cont {
   width: 100vw;
   max-width: 600px;
   margin: 0 40px 0 0;
 }
-section.sec4 div.cont div.bg_contact {
+section.contact div.cont div.bg_contact {
   padding: 20px 40px;
   display: flex;
   flex-direction: column;
   background-color: #fff;
   box-sizing: content-box;
 }
-section.sec4 div.cont div.bg_contact img {
+section.contact div.cont div.bg_contact img {
   width: 60px;
 }
-section.sec4 div.cont div.bg_contact a {
+section.contact div.cont div.bg_contact a {
   width: 100%;
   margin: 20px 0;
   display: flex;
   align-items: center;
   color: #100A23;
 }
-section.sec4 div.cont div.bg_contact a img {
+section.contact div.cont div.bg_contact a img {
   margin: 0 20px 0 0;
 }
-section.sec4 div.cont div.bg_contact a span {
+section.contact div.cont div.bg_contact a span {
+  width: 90%;
+  min-width: 200px;
   font-size: 1.5rem;
   font-weight: bold;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+section.contact div.cont div.bg_contact a span::after {
+  content: "→";
+  font-size: 2rem;
 }
 
 footer {
@@ -405,4 +416,159 @@ button.btn_orcamento {
   padding: 10px 20px;
   font-size: 1.25rem;
   transition: 200ms ease;
+}
+
+@media screen and (min-width: 1900px) {
+  #view {
+    max-width: unset !important;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1421px) {
+  #view {
+    justify-content: center !important;
+  }
+}
+@media screen and (max-width: 880px) {
+  header div.hd_socials {
+    display: none;
+  }
+  nav span {
+    width: 50%;
+    height: 100%;
+    max-width: 500px;
+    min-width: 200px;
+    position: fixed;
+    top: 60px;
+    right: -100%;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.2509803922) 0px 14px 28px, rgba(0, 0, 0, 0.2196078431) 0px 10px 10px;
+    transition: 200ms ease;
+  }
+  nav span a {
+    color: #000;
+    margin: calc(5vw + 10px) 0 0 0;
+  }
+  div#burguer {
+    display: flex !important;
+    cursor: pointer;
+  }
+  div#burguer div.line {
+    transition: 200ms ease;
+  }
+  div#burguer.active div.line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 10px);
+  }
+  div#burguer.active div.line:nth-child(2) {
+    opacity: 0;
+  }
+  div#burguer.active div.line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -11px);
+  }
+  section.home {
+    height: auto;
+    max-height: none;
+    padding: 40px 40px;
+    align-items: center;
+  }
+  section.home main {
+    width: 100%;
+    max-width: none;
+  }
+  .technologies_home {
+    max-width: 100%;
+    margin: 20px 0 0 0;
+    padding: 20px 0;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    scroll-snap-type: mandatory;
+  }
+  .technologies_home .technology_home {
+    margin: 0 40px 0 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+  }
+  .technologies_home .technology_home img {
+    width: 40px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .technologies_home .technology_home span {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  .github_infos_home {
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 40px;
+  }
+  .github_infos_home .github_link {
+    width: 100%;
+    align-items: center;
+  }
+  .github_infos_home .github_info {
+    display: none;
+  }
+  section.projects div.line {
+    margin: 5px 0;
+  }
+  section.projects div.cont #view div.projeto {
+    width: 70vw;
+  }
+  section.projects div.cont #view div.projeto a div.img-proj {
+    width: 100%;
+    height: inherit;
+    min-height: 200px;
+    background-position: top center;
+  }
+  section.contact {
+    justify-content: center;
+    background-position: top;
+  }
+  section.contact div.cont {
+    margin: 0 0 0 0;
+  }
+  section.contact div.cont h4 {
+    text-align: center;
+  }
+  section.contact div.cont div.bg_contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    text-align: center;
+  }
+  section.contact div.cont div.bg_contact a {
+    flex-direction: column;
+    align-items: inherit;
+    justify-content: center;
+  }
+  section.contact div.cont div.bg_contact a img {
+    margin: 0 0 10px 0;
+  }
+  section.contact div.cont div.bg_contact a span {
+    justify-content: center;
+  }
+  section.contact div.cont div.bg_contact a span::after {
+    display: none;
+  }
+  div.main_ft {
+    flex-direction: column;
+  }
+  div.main_ft div.txt_ft {
+    margin: 0 0 20px 0;
+    text-align: center;
+  }
+  div.main_ft div.txt_ft h4 {
+    max-width: none;
+    margin: 0;
+  }
 }/*# sourceMappingURL=index.css.map */

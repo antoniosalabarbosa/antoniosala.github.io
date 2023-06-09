@@ -11,15 +11,6 @@
 }
 
 @media screen and (max-width: 880px) {
-    section {
-        &.sec1 {
-            margin: 70px 0 0 0;
-        }
-
-        &:target {
-            scroll-margin-top: 58px;
-        }
-    }
 
     header div.hd_socials {
         display: none;
@@ -31,7 +22,7 @@
         max-width: 500px;
         min-width: 200px;
         position: fixed;
-        top: 70px;
+        top: 60px;
         right: -100%;
         z-index: 99;
         display: flex;
@@ -70,7 +61,62 @@
         }
     }
 
-    section.sec2 {
+    section.home{
+        height: auto;
+        max-height: none;
+        padding: 40px $pad;
+        align-items: center;
+
+        main{
+            width: 100%;
+            max-width: none;
+        }
+    }
+
+    .technologies_home{
+        max-width: 100%;
+        margin: 20px 0 0 0;
+        padding: 20px 0;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        scroll-snap-type: mandatory;
+    
+        .technology_home{
+            margin: 0 40px 0 0;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            column-gap: 10px;
+        
+            img{
+                width: 40px;
+                object-fit: cover;
+            }
+        
+            span{
+                color: $white;
+                font-size: 1.2rem;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .github_infos_home{
+        flex-direction: row;
+        flex-wrap: wrap;
+        row-gap: 40px;
+
+        .github_link{
+            width: 100%;
+            align-items: center;
+        }
+
+        .github_info{
+            display: none;
+        }
+    }
+
+    section.projects {
         div.line {
             margin: 5px 0;
         }
@@ -81,58 +127,13 @@
             a div.img-proj {
                 width: 100%;
                 height: inherit;
-                min-height: 230px;
-                background-position: top left;
+                min-height: 200px;
+                background-position: top center;
             }
         }
     }
 
-    section.sec3 div.cont {
-        flex-direction: column-reverse;
-        align-items: center;
-
-        div.informations {
-            max-width: inherit;
-            margin: 50px 0 0 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            strong {
-                border-bottom: 2px solid $black;
-            }
-
-            div.content_info {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-
-                ul {
-                    margin: 0 0 40px 0;
-                    text-align: center;
-
-                    &::before {
-                        content: "";
-                        margin: 0;
-                    }
-                }
-            }
-
-            & div:nth-last-child(1) {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-
-        div.img {
-            height: 300px;
-            max-width: 300px;
-            margin: 20px 0 0 0;
-        }
-    }
-
-    section.sec4 {
+    section.contact {
         justify-content: center;
         background-position: top;
 
@@ -158,6 +159,14 @@
                     img {
                         margin: 0 0 10px 0;
                     }
+
+                    span{
+                        justify-content: center;
+
+                        &::after{
+                            display: none;
+                        }
+                    }
                 }
             }
         }
@@ -172,6 +181,7 @@
 
             h4 {
                 max-width: none;
+                margin: 0;
             }
         }
     }
