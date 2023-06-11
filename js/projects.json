@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "Notebook Acer",
-        "description": "Divulgação de produto para venda online, feito para cliente na plataforma 99freelas.",
+        "description": "Pagina para divulgación de ordenador para venta en línea, hecho para cliente en la plataforma 99freelas.",
         "site": "https://site-acer-notebook.netlify.app/",
         "github": "https://github.com/antoniosalabarbosa/Notebook_Gamer_Acer",
         "img": "./src/portifolio/acer.jpg",
@@ -15,7 +15,7 @@
     {
         "id": 2,
         "name": "Nerdweb Clone",
-        "description": "Feito para processo seletivo na própria empresa, o site é responsivo e utiliza da biblioteca \"SwiperJS na criação dos slides.\"",
+        "description": "Homepage hecha durante una selección de la empresa Nerdweb, la pagina es responsiva y utiliza de la biblioteca javascript Swiper.",
         "site": "https://site-nerdweb-reply.netlify.app/",
         "github": "https://github.com/antoniosalabarbosa/nerdweb-test",
         "img": "./src/portifolio/nerdweb.jpg",
@@ -28,7 +28,7 @@
     {
         "id": 3,
         "name": "DVR Móveis",
-        "description": "Site para empresa de móveis. Exibe os produtos em forma de catálogo e as informações de endereço e contato com a loja física",
+        "description": "Web site para la empresa \"DVR Móveis\". Dispuene de los productos en forma de catálogo y muestra las informaciones de ubicación de la tienda física y contacto.",
         "site": "https://dvrmoveis.com/",
         "github": "",
         "img": "./src/portifolio/dvrmoveis.jpg",

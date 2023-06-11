@@ -1,9 +1,4 @@
 @media screen and (max-width: 880px) {
-
-    header div.hd_socials {
-        display: none;
-    }
-
     nav span {
         width: 50%;
         height: 100%;
@@ -24,36 +19,36 @@
         }
     }
 
-    div#burguer {
+    #burguer {
         display: flex !important;
         cursor: pointer;
 
-        div.line {
+        .line {
             transition: 200ms ease;
         }
 
         &.active {
-            div.line:nth-child(1) {
+            .line:nth-child(1) {
                 transform: rotate(45deg) translate(5px, 10px);
             }
 
-            div.line:nth-child(2) {
+            .line:nth-child(2) {
                 opacity: 0;
             }
 
-            div.line:nth-child(3) {
+            .line:nth-child(3) {
                 transform: rotate(-45deg) translate(5px, -11px);
             }
         }
     }
 
-    section.home{
+    .home{
         height: auto;
         max-height: none;
         padding: 40px $pad;
         align-items: center;
 
-        main{
+        & > div:nth-child(1){
             width: 100%;
             max-width: none;
         }
@@ -97,15 +92,15 @@
         }
     }
 
-    section.projects {
-        div.line {
+    .projects {
+        .line {
             margin: 5px 0;
         }
 
-        div.cont #view div.projeto {
+        .cont #view .projeto {
             width: 70vw;
 
-            a div.img-proj {
+            a .img-proj {
                 width: 100%;
                 height: inherit;
                 min-height: 200px;
@@ -114,18 +109,46 @@
         }
     }
 
-    section.contact {
+    .about{        
+        .container_about{
+            @include flex(column, initial, center, flex-start);
+    
+            div{
+                width: auto;
+                max-width: none;
+
+                @include flex(column, nowrap, initial, initial);
+
+                span, h5{
+                    align-self: center;
+                }
+
+                button{
+                    margin: 0 0 40px 0;
+                }
+            }
+
+            & > img{
+                width: 100vw;
+                max-width: 300px;
+                min-height: 200px;
+                max-height: 400px;
+            }
+        }
+    }
+
+    .contact {
         justify-content: center;
         background-position: top;
 
-        div.cont {
+        .cont {
             margin: 0 0 0 0;
 
             h4 {
                 text-align: center;
             }
 
-            div.bg_contact {
+            .bg_contact {
                 @include flex(column, initial, center, initial, 20px, 0px);
                 text-align: center;
 
@@ -148,10 +171,10 @@
         }
     }
 
-    div.main_ft {
+    .main_ft {
         flex-direction: column !important;
 
-        div.txt_ft {
+        .txt_ft {
             margin: 0 0 20px 0;
             text-align: center;
 

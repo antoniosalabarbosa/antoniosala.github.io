@@ -1,3 +1,4 @@
+const burguer = document.querySelector("#burguer");
 const menu_res = document.querySelector("nav span");
 const btn_download = document.querySelectorAll("button.download");
 const github_info = {
@@ -8,9 +9,11 @@ const github_info = {
 burguer.addEventListener("click", ()=>{
     if(menu_res.style.right == '0%'){
         menu_res.style.right = '-100%';
+        burguer.classList.remove("active");
     }
     else{
         menu_res.style.right = '0%';
+        burguer.classList.add("active");
     }
 });
 
@@ -32,7 +35,7 @@ async function fetchJSON() {
 function insertProjects(json){
     json.forEach((e,q)=>{
         let buttonsA = [
-            `<a href='${e.site}' target='_blank'><button>Site <img src='./src/icons/internet.png'></button></a>`,
+            `<a href='${e.site}' target='_blank'><button>Web <img src='./src/icons/internet.png'></button></a>`,
             (e.github ? `<a href='${e.github}' target='_blank'><button>Github <img src='./src/icons/github2.png'></button></a>` : false)
         ];
 

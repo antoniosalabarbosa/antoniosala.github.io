@@ -7,7 +7,7 @@
   margin: 0;
   border: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
   box-sizing: border-box;
 }
 
@@ -26,8 +26,25 @@ a {
   text-decoration: none;
 }
 
+h1 {
+  color: #fff;
+  font-family: "Ubuntu", Arial, Helvetica, sans-serif;
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+main.h2 {
+  margin: 0 0 20px 0;
+  color: rgba(255, 255, 255, 0.8117647059);
+  font-family: "Ubuntu", Arial, Helvetica, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 100;
+  line-height: 1.7;
+}
+
 h3 {
   color: #000;
+  font-family: "Ubuntu", Arial, Helvetica, sans-serif;
   font-size: 2rem;
   text-transform: uppercase;
 }
@@ -35,7 +52,15 @@ h3 {
 h4 {
   margin: 0 0 20px 0;
   color: #fff;
+  font-family: "Ubuntu", Arial, Helvetica, sans-serif;
   font-size: 2rem;
+}
+
+h5 {
+  margin: 0 0 20px 0;
+  font-family: "Ubuntu", Arial, Helvetica, sans-serif;
+  font-size: 2.5rem;
+  text-transform: uppercase;
 }
 
 button {
@@ -47,6 +72,7 @@ button {
 
 section {
   width: 100%;
+  padding: 40px;
   display: flex;
 }
 section:target {
@@ -81,6 +107,14 @@ header {
   position: fixed;
   top: 0;
   z-index: 99;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: initial;
+  -moz-column-gap: 0px;
+       column-gap: 0px;
+  row-gap: 0px;
   background-color: #100A23;
 }
 
@@ -109,25 +143,26 @@ nav span a {
 nav span a:hover {
   font-weight: 400;
 }
-nav div#burguer {
+nav #burguer {
   width: 60px;
   height: 40px;
   display: none;
   flex-direction: column;
   justify-content: center;
 }
-nav div#burguer div.line {
+nav #burguer .line {
   margin: 3px 0;
   width: 100%;
   height: 5px;
   background-color: #fff;
 }
 
-section.home {
+.home {
   height: 100vh;
-  max-height: 500px;
+  max-height: 510px;
   min-height: 200px;
   margin: 60px 0 0 0;
+  border-bottom: 5px solid #FF2EB9;
   padding: 0 80px;
   flex-direction: column;
   justify-content: center;
@@ -136,24 +171,9 @@ section.home {
   background-position: center;
   background-repeat: no-repeat;
 }
-
-main {
+.home > div:nth-child(1) {
   width: 100vw;
   max-width: 600px;
-}
-
-h1 {
-  color: #fff;
-  font-size: 3rem;
-  line-height: 1.5;
-}
-
-h2 {
-  margin: 0 0 20px 0;
-  color: rgba(255, 255, 255, 0.8117647059);
-  font-size: 1.2rem;
-  font-weight: 100;
-  line-height: 1.7;
 }
 
 .technologies_home {
@@ -204,6 +224,7 @@ h2 {
   row-gap: 0px;
 }
 .github_infos_home div {
+  margin: 10px 0 0 0;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -220,6 +241,14 @@ h2 {
 .github_infos_home div p {
   color: rgba(255, 255, 255, 0.768627451);
   font-size: 1.2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: initial;
+  align-items: center;
+  justify-content: initial;
+  -moz-column-gap: 0px;
+       column-gap: 0px;
+  row-gap: 0px;
 }
 .github_infos_home div img {
   width: 40px;
@@ -236,13 +265,25 @@ h2 {
        column-gap: 0px;
   row-gap: 0px;
   font-size: 1.3rem;
+  transition: 200ms ease;
 }
 .github_infos_home div a span {
-  margin: -7px 0 0 10px;
+  margin: 0 20px;
   font-size: 2em;
 }
+.github_infos_home div a:hover {
+  background-color: rgba(238, 238, 238, 0.2509803922);
+}
+.github_infos_home div p::before, .github_infos_home div a::before {
+  content: "";
+  width: 3px;
+  height: 45px;
+  margin: 0 10px 0 0;
+  display: inline-block;
+  background-color: #FF2EB9;
+}
 
-section.projects {
+.projects {
   padding: 30px 10px;
   display: flex;
   flex-direction: column;
@@ -253,7 +294,7 @@ section.projects {
        column-gap: 0px;
   row-gap: 0px;
 }
-section.projects div.cont {
+.projects .cont {
   width: 100%;
   margin: 20px 0 0 0;
   display: flex;
@@ -265,7 +306,7 @@ section.projects div.cont {
        column-gap: 0px;
   row-gap: 0px;
 }
-section.projects div.cont #view {
+.projects .cont #view {
   margin: 0 0 11px 0;
   display: flex;
   flex-direction: row;
@@ -276,7 +317,7 @@ section.projects div.cont #view {
        column-gap: 0px;
   row-gap: 0px;
 }
-section.projects div.cont #view div.projeto {
+.projects .cont #view .projeto {
   width: 50vw;
   max-width: 330px;
   margin: 20px 1vw;
@@ -293,7 +334,7 @@ section.projects div.cont #view div.projeto {
   box-shadow: rgba(0, 0, 0, 0.1607843137) 0px 1px 4px;
   transition: 200ms ease;
 }
-section.projects div.cont #view div.projeto a div.img-proj {
+.projects .cont #view .projeto a .img-proj {
   width: 330px;
   height: 200px;
   margin: 0 0 20px 0;
@@ -303,7 +344,7 @@ section.projects div.cont #view div.projeto a div.img-proj {
   background-repeat: no-repeat;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
-section.projects div.cont #view div.projeto div.txt-proj {
+.projects .cont #view .projeto .txt-proj {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -314,7 +355,7 @@ section.projects div.cont #view div.projeto div.txt-proj {
        column-gap: 0px;
   row-gap: 0px;
 }
-section.projects div.cont #view div.projeto div.txt-proj div.icon_tec {
+.projects .cont #view .projeto .txt-proj .icon_tec {
   width: 100%;
   display: flex;
   flex-direction: initial;
@@ -325,29 +366,29 @@ section.projects div.cont #view div.projeto div.txt-proj div.icon_tec {
        column-gap: 0px;
   row-gap: 0px;
 }
-section.projects div.cont #view div.projeto div.txt-proj div.icon_tec img {
+.projects .cont #view .projeto .txt-proj .icon_tec img {
   margin: 0 5px;
 }
-section.projects div.cont #view div.projeto div.txt-proj div.icon_tec img,
-section.projects div.cont #view div.projeto div.txt-proj div.view_in button img {
+.projects .cont #view .projeto .txt-proj .icon_tec img,
+.projects .cont #view .projeto .txt-proj .view_in button img {
   width: 30px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-section.projects div.cont #view div.projeto div.txt-proj div.line {
+.projects .cont #view .projeto .txt-proj .line {
   width: 100%;
   height: 3px;
   margin: 10px 0;
 }
-section.projects div.cont #view div.projeto div.txt-proj strong {
+.projects .cont #view .projeto .txt-proj strong {
   font-size: 1.2rem;
 }
-section.projects div.cont #view div.projeto div.txt-proj p {
+.projects .cont #view .projeto .txt-proj p {
   margin: 10px 0 20px 0;
   font-size: 1rem;
   line-height: 1.3;
 }
-section.projects div.cont #view div.projeto div.txt-proj div.view_in {
+.projects .cont #view .projeto .txt-proj .view_in {
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -358,10 +399,10 @@ section.projects div.cont #view div.projeto div.txt-proj div.view_in {
        column-gap: 0px;
   row-gap: 0px;
 }
-section.projects div.cont #view div.projeto div.txt-proj div.view_in a {
+.projects .cont #view .projeto .txt-proj .view_in a {
   align-self: flex-end;
 }
-section.projects div.cont #view div.projeto div.txt-proj div.view_in a button {
+.projects .cont #view .projeto .txt-proj .view_in a button {
   margin: 0 20px 0 0;
   padding: 7px 20px;
   display: flex;
@@ -376,19 +417,60 @@ section.projects div.cont #view div.projeto div.txt-proj div.view_in a button {
   color: #fff;
   background-color: #41326C;
 }
-section.projects div.cont #view div.projeto div.txt-proj div.view_in a button:hover {
+.projects .cont #view .projeto .txt-proj .view_in a button:hover {
   background-color: #705DA4;
 }
-section.projects div.cont #view div.projeto div.txt-proj div.view_in a button img {
+.projects .cont #view .projeto .txt-proj .view_in a button img {
   margin: 0 0 0 10px;
 }
 
-button.btn_download {
-  padding: 15px 50px;
-  font-size: 1.25rem;
+.about {
+  padding: 0 40px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: initial;
+  align-items: center;
+  justify-content: initial;
+  -moz-column-gap: 0px;
+       column-gap: 0px;
+  row-gap: 0px;
+}
+.about .container_about {
+  width: 100%;
+  margin: 40px 0 0 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: initial;
+  justify-content: center;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+  row-gap: 0;
+}
+.about .container_about div {
+  width: 100vw;
+  max-width: 700px;
+}
+.about .container_about div span {
+  font-size: 1.3rem;
+}
+.about .container_about div p {
+  margin: 10px 0 20px 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.about .container_about > img {
+  width: clamp(100px, 30vw, 300px);
+  height: 100%;
+  min-height: 200px;
+  max-height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
 }
 
-section.contact {
+.contact {
   padding: 40px 40px;
   justify-content: flex-end;
   background-image: url(../src/bg2.jpg);
@@ -396,12 +478,12 @@ section.contact {
   background-size: cover;
   background-repeat: no-repeat;
 }
-section.contact div.cont {
+.contact .cont {
   width: 100vw;
   max-width: 600px;
   margin: 0 40px 0 0;
 }
-section.contact div.cont div.bg_contact {
+.contact .cont .bg_contact {
   padding: 20px 40px;
   display: flex;
   flex-direction: column;
@@ -414,10 +496,10 @@ section.contact div.cont div.bg_contact {
   background-color: #fff;
   box-sizing: content-box;
 }
-section.contact div.cont div.bg_contact img {
+.contact .cont .bg_contact img {
   width: 60px;
 }
-section.contact div.cont div.bg_contact a {
+.contact .cont .bg_contact a {
   width: 100%;
   margin: 20px 0;
   display: flex;
@@ -430,10 +512,10 @@ section.contact div.cont div.bg_contact a {
   row-gap: 0px;
   color: #100A23;
 }
-section.contact div.cont div.bg_contact a img {
+.contact .cont .bg_contact a img {
   margin: 0 20px 0 0;
 }
-section.contact div.cont div.bg_contact a span {
+.contact .cont .bg_contact a span {
   width: 90%;
   min-width: 200px;
   font-size: 1.5rem;
@@ -447,7 +529,7 @@ section.contact div.cont div.bg_contact a span {
        column-gap: 0px;
   row-gap: 0px;
 }
-section.contact div.cont div.bg_contact a span::after {
+.contact .cont .bg_contact a span::after {
   content: "→";
   font-size: 2rem;
 }
@@ -466,7 +548,7 @@ footer {
   row-gap: 0px;
   background-color: rgb(12, 10, 21);
 }
-footer div.main_ft {
+footer .main_ft {
   width: 100%;
   border-bottom: 3px solid #fff;
   padding: 0 30px 20px 30px;
@@ -479,24 +561,14 @@ footer div.main_ft {
        column-gap: 0px;
   row-gap: 0px;
 }
-footer div.main_ft div.txt_ft h4 {
+footer .main_ft .txt_ft h4 {
   max-width: 350px;
   color: #fff;
-  font-size: 32px;
+  font-size: 2rem;
 }
-footer div.main_ft div.txt_ft span {
+footer .main_ft .txt_ft span {
   color: #fff;
-  font-size: 18px;
-}
-footer div.main_ft div.txt_ft div.btns_cont {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: initial;
-  align-items: initial;
-  justify-content: initial;
-  -moz-column-gap: 0px;
-       column-gap: 0px;
-  row-gap: 0px;
+  font-size: 1rem;
 }
 footer > div:nth-child(2) {
   width: 100%;
@@ -514,23 +586,32 @@ footer > div:nth-child(2) img {
   margin: 0 10px;
 }
 
-button.btn_download-2 {
-  margin: 3px 0;
-  padding: 13px 23px;
-  font-size: 18px;
+.btn_download {
+  padding: 15px 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: initial;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 0px;
+       column-gap: 0px;
+  row-gap: 0px;
+  color: #fff;
+  font-size: 1.2rem;
+  background-color: #F000A0;
 }
-
-button.btn_orcamento {
-  margin: 3px 0;
-  padding: 10px 20px;
-  font-size: 1.25rem;
-  transition: 200ms ease;
+.btn_download:hover {
+  background-color: #F0A4D7;
+}
+.btn_download img {
+  width: 30px;
+  height: 30px;
+  margin: 0 20px 0 0;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media screen and (max-width: 880px) {
-  header div.hd_socials {
-    display: none;
-  }
   nav span {
     width: 50%;
     height: 100%;
@@ -556,29 +637,29 @@ button.btn_orcamento {
     color: #000;
     margin: calc(5vw + 10px) 0 0 0;
   }
-  div#burguer {
+  #burguer {
     display: flex !important;
     cursor: pointer;
   }
-  div#burguer div.line {
+  #burguer .line {
     transition: 200ms ease;
   }
-  div#burguer.active div.line:nth-child(1) {
+  #burguer.active .line:nth-child(1) {
     transform: rotate(45deg) translate(5px, 10px);
   }
-  div#burguer.active div.line:nth-child(2) {
+  #burguer.active .line:nth-child(2) {
     opacity: 0;
   }
-  div#burguer.active div.line:nth-child(3) {
+  #burguer.active .line:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -11px);
   }
-  section.home {
+  .home {
     height: auto;
     max-height: none;
     padding: 40px 40px;
     align-items: center;
   }
-  section.home main {
+  .home > div:nth-child(1) {
     width: 100%;
     max-width: none;
   }
@@ -628,29 +709,63 @@ button.btn_orcamento {
   .github_infos_home .github_info {
     display: none;
   }
-  section.projects div.line {
+  .projects .line {
     margin: 5px 0;
   }
-  section.projects div.cont #view div.projeto {
+  .projects .cont #view .projeto {
     width: 70vw;
   }
-  section.projects div.cont #view div.projeto a div.img-proj {
+  .projects .cont #view .projeto a .img-proj {
     width: 100%;
     height: inherit;
     min-height: 200px;
     background-position: top center;
   }
-  section.contact {
+  .about .container_about {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: initial;
+    align-items: center;
+    justify-content: flex-start;
+    -moz-column-gap: 0px;
+         column-gap: 0px;
+    row-gap: 0px;
+  }
+  .about .container_about div {
+    width: auto;
+    max-width: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: initial;
+    justify-content: initial;
+    -moz-column-gap: 0px;
+         column-gap: 0px;
+    row-gap: 0px;
+  }
+  .about .container_about div span, .about .container_about div h5 {
+    align-self: center;
+  }
+  .about .container_about div button {
+    margin: 0 0 40px 0;
+  }
+  .about .container_about > img {
+    width: 100vw;
+    max-width: 300px;
+    min-height: 200px;
+    max-height: 400px;
+  }
+  .contact {
     justify-content: center;
     background-position: top;
   }
-  section.contact div.cont {
+  .contact .cont {
     margin: 0 0 0 0;
   }
-  section.contact div.cont h4 {
+  .contact .cont h4 {
     text-align: center;
   }
-  section.contact div.cont div.bg_contact {
+  .contact .cont .bg_contact {
     display: flex;
     flex-direction: column;
     flex-wrap: initial;
@@ -661,7 +776,7 @@ button.btn_orcamento {
     row-gap: 20px;
     text-align: center;
   }
-  section.contact div.cont div.bg_contact a {
+  .contact .cont .bg_contact a {
     display: flex;
     flex-direction: column;
     flex-wrap: initial;
@@ -671,23 +786,23 @@ button.btn_orcamento {
          column-gap: 0px;
     row-gap: 0px;
   }
-  section.contact div.cont div.bg_contact a ¡ img {
+  .contact .cont .bg_contact a ¡ img {
     margin: 0 0 10px 0;
   }
-  section.contact div.cont div.bg_contact a span {
+  .contact .cont .bg_contact a span {
     justify-content: center;
   }
-  section.contact div.cont div.bg_contact a span::after {
+  .contact .cont .bg_contact a span::after {
     display: none;
   }
-  div.main_ft {
+  .main_ft {
     flex-direction: column !important;
   }
-  div.main_ft div.txt_ft {
+  .main_ft .txt_ft {
     margin: 0 0 20px 0;
     text-align: center;
   }
-  div.main_ft div.txt_ft h4 {
+  .main_ft .txt_ft h4 {
     max-width: none;
     margin: 0;
   }

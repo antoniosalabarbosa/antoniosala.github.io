@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="root">
@@ -17,9 +17,10 @@
                 <strong>Antonio Sala</strong>
                 
                 <span>
-                    <a href="#HOME">Início</a>
-                    <a href="#PROJETOS">Projetos</a>
-                    <a href="#CONTATO">Contato</a>
+                    <a href="#HOME">Inicio</a>
+                    <a href="#PROJECTS">Proyectos</a>
+                    <a href="#ABOUT">Sobre mí</a>
+                    <a href="#CONTACT">Contato</a>
                 </span>
 
                 <div id="burguer">
@@ -31,12 +32,12 @@
         </header>
 
         <section class="home" id="HOME">
-            <main>
-                <h1>Hi, I'm Antonio!</h1>
-                <h2>
-                    Desarrollador Web con conocimiento en frontend, backend, SQL y NoSQL. Curso Análisis y Desarrollo de Sistemas, hablo portugués, español y estudio inglés.
-                </h2>
-            </main>
+            <div>
+                <h1>Hola, soy Antonio!</h1>
+                <main class="h2">
+                    Desarrollador web con conocimiento en frontend, backend, SQL y NoSQL. Curso análisis y desarrollo de sistemas, hablo portugués, español y estudio inglés.
+                </main>
+            </div>
 
             <div class="technologies_home">
                 <div class="technology_home">
@@ -50,13 +51,13 @@
                 </div>
 
                 <div class="technology_home">
-                    <img src="https://cdn.iconscout.com/icon/free/png-256/free-node-js-1174925.png" alt="NodeJS">
-                    <span>NodeJS</span>
+                    <img src="./src/icons/sass.png" alt="Tech">
+                    <span>SASS</span>
                 </div>
 
                 <div class="technology_home">
-                    <img src="./src/icons/sass.png" alt="Tech">
-                    <span>SASS</span>
+                    <img src="https://cdn.iconscout.com/icon/free/png-256/free-node-js-1174925.png" alt="NodeJS">
+                    <span>NodeJS</span>
                 </div>
 
                 <div class="technology_home">
@@ -73,25 +74,25 @@
             <div class="github_infos_home">
                 <div class="github_info">
                     <strong>?</strong>
-                    <p>Repositories</p>
+                    <p>Repositorios</p>
                 </div>
 
                 <div class="github_info">
                     <strong>?</strong>
-                    <p>Followers</p>
+                    <p>Seguidores</p>
                 </div>
 
                 <div class="github_link">
                     <img src="./src/icons/github2.png">
-                    <a href="#">
+                    <a href="https://github.com/antoniosalabarbosa" target="_blank">
                         Ver Github <span>→</span>
                     </a>
                 </div>
             </div>
         </section>
 
-        <section class="projects" id="PROJETOS">
-            <h3>PROJETOS</h3>
+        <section class="projects" id="PROJECTS">
+            <h3>PROYECTOS</h3>
             <div class="line"></div>
 
             <div class="cont">
@@ -100,19 +101,44 @@
             </div>
         </section>
 
-        <!--
-        <section class="about" id="SOBRE">
-            <h3>SOBRE</h3>
+        <section class="about" id="ABOUT">
+            <h3>SOBRE MÍ</h3>
             <div class="line"></div>
-        </section>
-        -->
 
-        <section class="contact" id="CONTATO">
+            <div class="container_about">
+                <div>
+                    <span>Me llamo</span>
+                    <h5>Antonio Sala Barbosa</h5><p>
+                        Curso Analisis y Desarrollo de Sistemas en modelo de enseñanza a distancia en la universidade brasileña UNINASSAU.
+                    </p>
+                    <p>
+                        Estudio desarrollo de sistemas para internet desde 2019, soy curioso con los lenguajes de programación y las tecnologías que domino son: ReactJS, Typescript, CSS, NodeJS, MySQL, MongoDB y poseo conocimiento en UX y UI Design, tengo aptitud con la aplicación Figma.
+                    </p>
+
+                    <p>
+                        Nací en Brasil y vivo en España actualmente, tengo la doble nacionalidad. Domino el español a nivél de conversación y el portugués es mí lengua nativa y estoy estudiando inglés.
+                    </p>
+
+                    <p>
+                        Me gusta aprender sobre tecnologías de desarrollo web y hacer proyectos que me añadan conocimiento.
+                    </p>
+
+                    <button class="btn_download download">
+                        <img src="./src/icons/cv.png">
+                        VER CURRICULUM
+                    </button>
+                </div>
+
+                <img src="./src/antonio2.jpg">
+            </div>
+        </section>
+
+        <section class="contact" id="CONTACT">
             <div class="cont">
                 <h4>CONTATO</h4>
                 <div class="bg_contact">
-                    <a href="https://api.whatsapp.com/send/?phone=625594483">
-                        <img src="./src/icons/WHATSAPP.png" target="_blank">
+                    <a href="https://api.whatsapp.com/send/?phone=625594483" target="_blank">
+                        <img src="./src/icons/WHATSAPP.png">
                         <span>+34 625 59 44 83</span>
                     </a>
 
@@ -141,9 +167,10 @@
                     <span>©2023</span>
                 </div>
 
-                <div class="btns_cont">
-                    <button class="btn_download-2 download">BAIXAR CURRÍCULO</button>
-                </div>
+                <button class="btn_download download">
+                    <img src="./src/icons/cv.png">
+                    VER CURRICULUM
+                </button>
             </div>
 
             <div>
