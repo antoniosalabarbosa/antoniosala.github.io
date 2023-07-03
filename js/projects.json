@@ -27,6 +27,19 @@
     },
     {
         "id": 3,
+        "name": "Change to Dark Theme",
+        "description": "Cambio entre tema de colores claros para colores oscuros en la pagina.",
+        "site": "https://dark-theme-website.netlify.app/",
+        "github": "https://github.com/antoniosalabarbosa/dark-theme",
+        "img": "./src/portifolio/change_theme.jpg",
+        "techs": [
+            "html.png",
+            "css.png",
+            "js.png"
+        ]
+    },
+    {
+        "id": 4,
         "name": "DVR Móveis",
         "description": "Web site para la empresa \"DVR Móveis\". Dispuene de los productos en forma de catálogo y muestra las informaciones de ubicación de la tienda física y contacto.",
         "site": "https://dvrmoveis.com/",
